@@ -7,10 +7,16 @@ Project====>\ Clone of LimeRoad
 
   ++ Rishi Raj Bhardwaj
                             =========>\ Will build Frontend Side
+
+
   ++ Ayush Kaushik
                             =========>\ Will build Frontend Side
+
+
   ++ Satyam Kumar Jha
                             =========>\ Will build Frontend Side
+
+
   ++ Kartik Jain
                             =========>\ Will build Login Page & Single Product Page
 
@@ -20,7 +26,9 @@ Project====>\ Clone of LimeRoad
 ## First Day Work
 
   ++ is to build all the folder structure of the coedbase
+
   ++ link with github
+  
   ++ connect with MobgoDB Atlas
 
 
