@@ -5,13 +5,13 @@ Project====>\ Clone of LimeRoad
   ++ Suman Biswas (Team Leader)
                             ========>\ Will build Backend Side
 
-  ++ Rishi Raj Bharadwaj
+  ++ Rishi Raj Bhardwaj
                             =========>\ Will build Frontend Side
-  ++ Ayush
+  ++ Ayush Kaushik
                             =========>\ Will build Frontend Side
   ++ Satyam Kumar Jha
                             =========>\ Will build Frontend Side
-  ++ Kartick Jain
+  ++ Kartik Jain
                             =========>\ Will build Login Page & Single Product Page
 
 ## Project IA
