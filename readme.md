@@ -11,7 +11,7 @@
 
 
   ++ Ayush Kaushik
-                            =========>\ Will build Frontend Side
+                            =========>\ Will build Navbar and ProductPage
 
 
   ++ Satyam Kumar Jha
@@ -19,14 +19,14 @@
 
 
   ++ Kartik Jain
-                            =========>\ Will build Login Page & Single Product Page
+                            =========>\ Will build Login Page
 
 ## Project IA
   ++ Sumit Beniwal
 
 ## First Day Work
 
-  ++ is to build all the folder structure of the coedbase
+  ++ is to build all the folder structure of the codebase
 
   ++ link with github
   
