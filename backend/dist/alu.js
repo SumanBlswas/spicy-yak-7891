@@ -1,9 +1,5 @@
-import React from 'react'
-
 const alu = () => {
-  return (
-    <div>alu</div>
-  )
-}
+  return <div>alu</div>;
+};
 
-export default alu
+export default alu;
