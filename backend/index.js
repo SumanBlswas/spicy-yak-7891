@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import cors from "cors";
 import { connection } from "./config/db.js";
 import { userRouter } from "./routes/userRoutes.js";
+import { menProductRouter } from "./routes/menProductRoutes.js";
+import { womenProductRouter } from "./routes/womenProductRoutes.js";
 dotenv.config();
 
 const app = express();
@@ -14,6 +16,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/users", userRouter);
+app.use("/menproducts", menProductRouter);
+app.use("/womenproducts", womenProductRouter);
 
 app.listen(process.env.PORT_NUMBER, async () => {
   try {
