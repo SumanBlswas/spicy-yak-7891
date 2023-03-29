@@ -45,10 +45,27 @@ menProductRouter.delete("/delete", async (req, res) => {
 });
 
 // for searching and filteration part
-menProductRouter.get("/query", (req, res) => {
-  let {} = req.body;
+menProductRouter.get("/query", async (req, res) => {
+  let { brand, title, price, description, category } = req.query;
   try {
     let filter = {};
+    if (brand) {
+      filter.brand = { $regex: brand };
+    }
+    if (title) {
+      filter.title = { $regex: title };
+    }
+    if (price) {
+      filter.price = { $regex: price };
+    }
+    if (description) {
+      filter.description = { $regex: description };
+    }
+    if (category) {
+      filter.category = { $regex: category };
+    }
+    let user = await menProductModel.find(filter);
+    res.status(200).send(user);
   } catch (error) {
     res.status(404).send({ msg: error.message });
   }
