@@ -46,7 +46,7 @@ womenProductRouter.delete("/delete/:userID", async (req, res) => {
 
 // for searching and filteration part
 womenProductRouter.get("/query", async (req, res) => {
-  let { brand, title, price, description, category } = req.query;
+  let { brand, title, price, size, category } = req.query;
   try {
     let filter = {};
     if (brand) {
@@ -58,8 +58,8 @@ womenProductRouter.get("/query", async (req, res) => {
     if (price) {
       filter.price = { $regex: price };
     }
-    if (description) {
-      filter.description = { $regex: description };
+    if (size) {
+      filter.size = { $regex: size };
     }
     if (category) {
       filter.category = { $regex: category };
