@@ -5,7 +5,10 @@ const menProductRouter = express.Router();
 
 menProductRouter.get("/", async (req, res) => {
   try {
-    const user = await menProductModel.find();
+    const user = await menProductModel.aggregate([
+      { $match: { category: { $nin: ["shoes", "sneakers"] } } },
+      { $sample: { size: 10 } },
+    ]);
     res.status(200).send(user);
   } catch (error) {
     res.status(404).send({ msg: error.message });
