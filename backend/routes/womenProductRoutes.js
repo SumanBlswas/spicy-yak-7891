@@ -34,7 +34,7 @@ womenProductRouter.patch("/updates/:userID", async (req, res) => {
   }
 });
 
-womenProductRouter.delete("/delete", async (req, res) => {
+womenProductRouter.delete("/delete/:userID", async (req, res) => {
   const { userID } = req.params;
   try {
     await womenProductModel.findByIdAndDelete({ _id: userID });
