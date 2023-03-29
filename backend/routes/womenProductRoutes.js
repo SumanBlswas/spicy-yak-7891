@@ -64,9 +64,9 @@ womenProductRouter.get("/query", async (req, res) => {
     if (category) {
       filter.category = { $regex: category };
     }
-    if (req.query) {
-      filter = { $regex: req.query };
-    }
+    // if (req.query) {
+    //   filter = { $regex: req.query };
+    // }
     let user = await womenProductModel.find(filter);
     res.status(200).send(user);
   } catch (error) {
