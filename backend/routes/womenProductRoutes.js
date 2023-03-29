@@ -34,7 +34,7 @@ womenProductRouter.patch("/updates/:userID", async (req, res) => {
   }
 });
 
-womenProductRouter.delete("/delete", async (req, res) => {
+womenProductRouter.delete("/delete/:userID", async (req, res) => {
   const { userID } = req.params;
   try {
     await womenProductModel.findByIdAndDelete({ _id: userID });
@@ -45,10 +45,30 @@ womenProductRouter.delete("/delete", async (req, res) => {
 });
 
 // for searching and filteration part
-womenProductRouter.get("/query", (req, res) => {
-  let {} = req.body;
+womenProductRouter.get("/query", async (req, res) => {
+  let { brand, title, price, description, category } = req.query;
   try {
     let filter = {};
+    if (brand) {
+      filter.brand = { $regex: brand };
+    }
+    if (title) {
+      filter.title = { $regex: title };
+    }
+    if (price) {
+      filter.price = { $regex: price };
+    }
+    if (description) {
+      filter.description = { $regex: description };
+    }
+    if (category) {
+      filter.category = { $regex: category };
+    }
+    // if (req.query) {
+    //   filter = { $regex: req.query };
+    // }
+    let user = await womenProductModel.find(filter);
+    res.status(200).send(user);
   } catch (error) {
     res.status(404).send({ msg: error.message });
   }
