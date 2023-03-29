@@ -2,7 +2,7 @@
   Project====>\ Clone of LimeRoad
                 A Ecommerce Website for Mens, Womens & Kids
 
-## StyloZone
+## StyloZone(Clone of LimeRoad)
 
 ## Project Members
   ++ Suman Biswas (Team Leader)
