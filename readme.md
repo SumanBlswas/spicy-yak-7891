@@ -25,6 +25,7 @@
   ++ Sumit Beniwal
 
 ## First Day Work
+  ++Backend
 
   ++ is to build all the folder structure of the codebase
 
@@ -35,4 +36,21 @@
 
 ## Second Day Work
 
-  ++ Will be Updated Soon...
+  ++Backend
+
+  ++ have built most of the endpoints
+
+  ++ done with 
+              ++ user
+
+              ++ menProduct
+
+              ++ womenProduct
+
+              ++ cart
+  
+  ++ built a html page where you can find all of the endpoints
+
+  ++Frontend
+
+  
