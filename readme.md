@@ -13,7 +13,7 @@
 
 
   ++ Ayush Kaushik
-                            =========>\ Will build Navbar and ProductPage
+                            =========>\ Will build Navbar and HomePage
 
 
   ++ Satyam Kumar Jha
