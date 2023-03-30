@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const cartSchema = mongoose.Schema({
+const menProductSchema = mongoose.Schema({
   img1: String,
   brand: String,
   title: String,
@@ -11,6 +11,6 @@ const cartSchema = mongoose.Schema({
   category: String,
 });
 
-const cartModel = mongoose.model("cart", cartSchema);
+const menProductModel = mongoose.model("menProduct", menProductSchema);
 
-export { cartModel };
+export { menProductModel };

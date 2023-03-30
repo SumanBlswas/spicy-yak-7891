@@ -50,7 +50,7 @@ userRouter.post("/register", async (req, res) => {
   const { name, email, password, age, gender } = req.body;
   try {
     bcrypt.hash(password, 5, async (err, hash) => {
-      let user = userModel({
+      let user = new userModel({
         name,
         email,
         password: hash,
@@ -92,16 +92,16 @@ userRouter.get("/query", async (req, res) => {
   try {
     let filter = {};
     if (name) {
-      filter.name = name;
+      filter.name = { $regex: name };
     }
     if (email) {
-      filter.email = email;
+      filter.email = { $regex: email };
     }
     if (age) {
-      filter.age = age;
+      filter.age = { $regex: age };
     }
     if (gender) {
-      filter.gender = gender;
+      filter.gender = { $regex: gender };
     }
     let user = await userModel.find(filter);
     res.status(200).send(user);

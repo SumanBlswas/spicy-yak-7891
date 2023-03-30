@@ -7,228 +7,237 @@ import { FaUser } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "./logo.jpg";
 import { Link } from "react-router-dom";
+import { Box, Text } from "@chakra-ui/layout";
 
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
  
   return (
+
     <div>
       <div className={styles.navbar_container}>
         <div className={styles.first_box}>
           <div id={styles.logo}>
             <Link to="/">
+
+    <Box pb="28">
+      <Box className={styles.navbar_container}>
+        <Box className={styles.first_box}>
+          <Box id={styles.logo}>
+            <Link>
+
               <img src={logo} alt="logo" />
             </Link>
             {/* LimeRoad */}
-          </div>
-          <div className={show ? styles.nav_menu_links : styles.nav_links}>
+          </Box>
+          <Box className={show ? styles.nav_menu_links : styles.nav_links}>
             <ul className={styles.ul_links}>
               <li>
-                <a href="#">Women</a>
-                <div className={styles.women_menu}>
-                  <div id={styles.ethnic_wear}>
+                <a  href="*">Women</a>
+                <Box className={styles.women_menu}>
+                  <Box id={styles.ethnic_wear}>
                     <button>Ethnic Wear</button>
-                    <p>Kurta Kurtis</p>
-                    <p>Sarees</p>
-                    <p>Ethnic Sets</p>
-                    <p>Suits& Dress Materials</p>
-                    <p>Lehengas</p>
-                    <p>Blouses</p>
-                    <p>Dupattas</p>
-                    <p>Ethnic Dresses</p>
-                    <p>Palazzos & Skirts</p>
-                    <p>Shawls & Wraps</p>
-                    <p>Cloaks & Abaya</p>
-                  </div>
-                  <div id={styles.western_wear}>
+                    <Text>Kurta Kurtis</Text>
+                    <Text>Sarees</Text>
+                    <Text>Ethnic Sets</Text>
+                    <Text>Suits& Dress Materials</Text>
+                    <Text>Lehengas</Text>
+                    <Text>Blouses</Text>
+                    <Text>Dupattas</Text>
+                    <Text>Ethnic Dresses</Text>
+                    <Text>Palazzos & Skirts</Text>
+                    <Text>Shawls & Wraps</Text>
+                    <Text>Cloaks & Abaya</Text>
+                  </Box>
+                  <Box id={styles.western_wear}>
                     <button>Western Wear</button>
-                    <p>Tops</p>
-                    <p>Dresses</p>
-                    <p>Tees</p>
-                    <p>Shirts</p>
-                    <p>Tunics</p>
-                    <p>Jumpsuits</p>
-                    <p>Sets</p>
-                    <p>Kaftans</p>
-                    <p>Jeans & Jeggings</p>
-                    <p>Trousers & Pants</p>
-                    <p>Shrugs</p>
-                  </div>
-                  <div id={styles.sports}>
+                    <Text>Tops</Text>
+                    <Text>Dresses</Text>
+                    <Text>Tees</Text>
+                    <Text>Shirts</Text>
+                    <Text>Tunics</Text>
+                    <Text>Jumpsuits</Text>
+                    <Text>Sets</Text>
+                    <Text>Kaftans</Text>
+                    <Text>Jeans & Jeggings</Text>
+                    <Text>Trousers & Pants</Text>
+                    <Text>Shrugs</Text>
+                  </Box>
+                  <Box id={styles.sports}>
                     <button>Sports & Activewear</button>
-                    <p>Swims</p>
-                    <p>Topwear</p>
-                    <p>Bottomwear</p>
-                    <p>Shoes</p>
+                    <Text>Swims</Text>
+                    <Text>Topwear</Text>
+                    <Text>Bottomwear</Text>
+                    <Text>Shoes</Text>
                     <button>Lingerie & Sleepwear</button>
-                    <p>Bra</p>
-                    <p>Panties</p>
-                    <p>Lingerie</p>
-                    <p>SleepWear</p>
+                    <Text>Bra</Text>
+                    <Text>Panties</Text>
+                    <Text>Lingerie</Text>
+                    <Text>SleepWear</Text>
                     <button>Belts & Watches</button><br/><br/>
                     <button>Sunglasses & Hats</button>
                     
-                  </div>
-                  <div id={styles.jeweller}>
+                  </Box>
+                  <Box id={styles.jeweller}>
                     <button>Jewellery</button>
-                    <p>Fashion Jewellery</p>
-                    <p>lmitation Jewellery</p>
-                    <p>Earnings</p>
-                    <p>Necklace & Pendants</p>
+                    <Text>Fashion Jewellery</Text>
+                    <Text>lmitation Jewellery</Text>
+                    <Text>Earnings</Text>
+                    <Text>Necklace & Pendants</Text>
                     <button>Footwear</button>
-                    <p>Flats</p>
-                    <p>Heels</p>
-                    <p>Casual Shoes</p>
-                    <p>Flip Flops</p>
+                    <Text>Flats</Text>
+                    <Text>Heels</Text>
+                    <Text>Casual Shoes</Text>
+                    <Text>Flip Flops</Text>
                     <button>Beauty & Personal Care</button>
                     
-                  </div>
-                </div>
+                  </Box>
+                </Box>
               </li>
               <li>
-                <a href="#">Men</a>
-                <div className={styles.women_menu}>
-                  <div id={styles.ethnic_wear}>
+                <a  href="*">Men</a>
+                <Box className={styles.women_menu}>
+                  <Box id={styles.ethnic_wear}>
                     <button>Top Wear</button>
-                    <p>T-Shirts</p>
-                    <p>Polo T Shirts</p>
-                    <p>Casual Shirts</p>
-                    <p>Formal Shirts</p>
-                    <p>Suits & Blazers</p>
-                    <p>Jackets</p>
-                    <p>Sweaters & SweatShirts</p>
+                    <Text>T-Shirts</Text>
+                    <Text>Polo T Shirts</Text>
+                    <Text>Casual Shirts</Text>
+                    <Text>Formal Shirts</Text>
+                    <Text>Suits & Blazers</Text>
+                    <Text>Jackets</Text>
+                    <Text>Sweaters & SweatShirts</Text>
                    <button>Bottom Wear</button>
-                    <p>Jeans</p>
-                    <p>Casual Trousers</p>
-                    <p>Formal Trousers</p>
-                    <p>Joggers</p>
-                    <p>Shorts</p>
-                  </div>
-                  <div id={styles.western_wear}>
+                    <Text>Jeans</Text>
+                    <Text>Casual Trousers</Text>
+                    <Text>Formal Trousers</Text>
+                    <Text>Joggers</Text>
+                    <Text>Shorts</Text>
+                  </Box>
+                  <Box id={styles.western_wear}>
                     <button>Ethnic Wear</button>
-                    <p>Kurtas</p>
-                    <p>Ethnic Wear Sets</p>
-                    <p>Nehru Jackets</p>
-                    <p>Ethnic Bottom Wear</p>
+                    <Text>Kurtas</Text>
+                    <Text>Ethnic Wear Sets</Text>
+                    <Text>Nehru Jackets</Text>
+                    <Text>Ethnic Bottom Wear</Text>
                     <button>Sports Wear</button>
-                    <p>T-Shirts</p>
-                    <p>Shorts</p>
-                    <p>Track Pants</p>
-                    <p>Track Suits</p>                    
+                    <Text>T-Shirts</Text>
+                    <Text>Shorts</Text>
+                    <Text>Track Pants</Text>
+                    <Text>Track Suits</Text>                    
                     <button>Fragrances</button>
-                  </div>
-                  <div id={styles.sports}>
+                  </Box>
+                  <Box id={styles.sports}>
                     <button>Footwear</button>
-                    <p>Casual Shoes</p>
-                    <p>Formal Shoes</p>
-                    <p>Sports Shoes</p>
-                    <p>Jutis And Mojans</p>
-                    <p>Slippers & Sandals</p>
-                    <p>Socks</p>
+                    <Text>Casual Shoes</Text>
+                    <Text>Formal Shoes</Text>
+                    <Text>Sports Shoes</Text>
+                    <Text>Jutis And Mojans</Text>
+                    <Text>Slippers & Sandals</Text>
+                    <Text>Socks</Text>
                     <button>Belts,Bags & Wallets</button> <br/><br/>                  
                     <button>Watches</button><br/><br/>
                     <button>Sunglasses & Frames</button>
                     
-                  </div>
-                  <div id={styles.jeweller}>
+                  </Box>
+                  <Box id={styles.jeweller}>
                     <button>Brands</button>
-                    <p>Arrow</p>
-                    <p>US Polo Assn </p>
-                    <p>Aeropostale</p>
-                    <p>Campus Sutra</p>                    
-                    <p>Ruggers</p>
-                    <p>Canary London</p>
-                    <p>Hang Up</p>
-                    <p>Alcis</p>
+                    <Text>Arrow</Text>
+                    <Text>US Polo Assn </Text>
+                    <Text>Aeropostale</Text>
+                    <Text>Campus Sutra</Text>                    
+                    <Text>Ruggers</Text>
+                    <Text>Canary London</Text>
+                    <Text>Hang Up</Text>
+                    <Text>Alcis</Text>
                     
                     
-                  </div>
-                </div>
+                  </Box>
+                </Box>
 
               </li>
               <li>
-                <a href="#">Kids</a>
-                <div className={styles.women_menu}>
-                  <div id={styles.ethnic_wear}>
+                <a  href="*">Kids</a>
+                <Box className={styles.women_menu}>
+                  <Box id={styles.ethnic_wear}>
                     <button>Boys</button>
-                    <p>T-Shirts</p>
-                    <p>Shirts</p>
-                    <p>Bottom Wear</p>
-                    <p>Ethnic Wear</p>
-                    <p>Sweater & Cardigans</p>
-                    <p>Coats & Jackets</p>
-                    <p>InnerWear & Nightwear</p>
-                    <p>Twin Sets & Dungrees</p>
-                    <p>Palazzos & Skirts</p>
-                    <p>Shawls & Wraps</p>
-                    <p>Cloaks & Abaya</p>
+                    <Text>T-Shirts</Text>
+                    <Text>Shirts</Text>
+                    <Text>Bottom Wear</Text>
+                    <Text>Ethnic Wear</Text>
+                    <Text>Sweater & Cardigans</Text>
+                    <Text>Coats & Jackets</Text>
+                    <Text>InnerWear & Nightwear</Text>
+                    <Text>Twin Sets & Dungrees</Text>
+                    <Text>Palazzos & Skirts</Text>
+                    <Text>Shawls & Wraps</Text>
+                    <Text>Cloaks & Abaya</Text>
                     
-                  </div>
-                  <div id={styles.western_wear}>
+                  </Box>
+                  <Box id={styles.western_wear}>
                     <button>Girls</button>
-                    <p>Dresses & Frocks</p>
-                    <p>Tees & Tops</p>
-                    <p>Bottom Wear</p>
-                    <p>Ethnic Wear</p>
-                    <p>Sweater & Cardigans</p>
-                    <p>Coats & Jackets</p>
-                    <p>Twin Sets & Jump Suits</p>
-                    <p>Innerwear & Nightwear</p>                    
-                  </div>
-                  <div id={styles.sports}>
+                    <Text>Dresses & Frocks</Text>
+                    <Text>Tees & Tops</Text>
+                    <Text>Bottom Wear</Text>
+                    <Text>Ethnic Wear</Text>
+                    <Text>Sweater & Cardigans</Text>
+                    <Text>Coats & Jackets</Text>
+                    <Text>Twin Sets & Jump Suits</Text>
+                    <Text>Innerwear & Nightwear</Text>                    
+                  </Box>
+                  <Box id={styles.sports}>
                     <button>Footwear</button>
-                    <p>Sandals & Floaters</p>
-                    <p>Slippers & Flip Flops</p>
-                    <p>Casual Shoes</p>
-                    <p>Sports Shoes</p>                   
-                    <p>Formal Shoes</p>
+                    <Text>Sandals & Floaters</Text>
+                    <Text>Slippers & Flip Flops</Text>
+                    <Text>Casual Shoes</Text>
+                    <Text>Sports Shoes</Text>                   
+                    <Text>Formal Shoes</Text>
                     <button>Accessories</button>  <br/><br/>                  
                     <button>Bed & Bath</button>
                     
                     
-                  </div>
-                  <div id={styles.jeweller}>
+                  </Box>
+                  <Box id={styles.jeweller}>
                     <button>Brands</button>
-                    <p>Giny & Jony</p>
-                    <p>US Polo Assn </p>
-                    <p>Monte Carlo</p>
-                    <p>Cherokee</p>                    
-                    <p>Li'l Tomatoes</p>
-                    <p>NewVin</p>
-                    <p>Under Fourteen Only</p>
-                    <p>Tales & Stories</p>
+                    <Text>Giny & Jony</Text>
+                    <Text>US Polo Assn </Text>
+                    <Text>Monte Carlo</Text>
+                    <Text>Cherokee</Text>                    
+                    <Text>Li'l Tomatoes</Text>
+                    <Text>NewVin</Text>
+                    <Text>Under Fourteen Only</Text>
+                    <Text>Tales & Stories</Text>
                    
                     
-                  </div>
-                </div>
+                  </Box>
+                </Box>
               </li>
               <li>
-                <a href="#">Home</a>
+                <a  href="*">Home</a>
               </li>
               <li>
-                <a href="#">offers</a>
+                <a  href="*">offers</a>
               </li>
             </ul>
-          </div>
-        </div>
-        <div className={styles.second_box}>
+          </Box>
+        </Box>
+        <Box className={styles.second_box}>
           <ul className={styles.second_ul_links}>
             <li>
-              <a href="#">
+              <a  href="*">
                 <HiPencil className={styles.icon} />
                 <br />
                 Scrapbook
               </a>
             </li>
             <li>
-              <a href="#">
+              <a  href="*">
                 <BiSearchAlt2 className={styles.icon} />
                 <br />
                 Search
               </a>
             </li>
             <li>
-              <a href="#" id={styles.cart_icon}>
+              <a  href="*" id={styles.cart_icon}>
                 <AiOutlineShoppingCart className={styles.icon} />
                 <span id={styles.count}>0</span>
                 <br />
@@ -236,28 +245,28 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a  href="*">
                 <FaUser className={styles.icon} />
                 <br />
                 profile
               </a>
-              <div className={styles.profile_menu}>                
+              <Box className={styles.profile_menu}>                
                 <h3>Welcome</h3>
-                <a href="#">Login</a>
+                <a  href="*">Login</a>
                 <button>Logout</button>
-                <a href="#">Admin</a>
+                <a  href="*">Admin</a>
 
-              </div>
+              </Box>
             </li>
           </ul>
-        </div>
-        <div className={styles.hamburger_menu}>
-          <a href="#" onClick={() => setShow(!show)}>
+        </Box>
+        <Box className={styles.hamburger_menu}>
+          <a  href="*" onClick={() => setShow(!show)}>
             <GiHamburgerMenu id={styles.hamburger} />
           </a>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
