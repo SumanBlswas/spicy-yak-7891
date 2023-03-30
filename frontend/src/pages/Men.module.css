@@ -1,0 +1,261 @@
+
+.main_container{
+    border:0px solid black;
+    width:1000px;
+    height:auto;
+    margin-top:10px;
+    margin-left:-50px;    
+    padding-top:5px;
+    /* margin:auto; */
+}
+.myfeed{
+    padding-top:10px;    
+    border:0px solid blue;
+    height:90px;
+    display:flex;
+    flex-direction:row;
+     background-color:rgb(232, 247, 247);
+    margin-bottom:20px;
+    
+
+}
+.myfeed>div{
+    border:0px solid black;
+    width:9%;
+    cursor:pointer;
+   
+}
+.myfeed>div:nth-child(1){
+    border-right:0.5px solid black;
+    height:80%;
+}
+.myfeed>div>img{
+    width:55%;
+}
+.myfeed>div>p{
+    font-size:10px;
+    text-transform:uppercase;
+    line-height:2px;
+    font-weight:400;
+    letter-spacing:0.4px;
+}
+.first_box{
+    border:0px solid black;
+    height:200px;
+    
+}
+.first_box>div:nth-child(1){
+    border:0px solid rgb(244, 199, 206);
+    height:20%;
+    background-color:rgb(248, 219, 223);
+    display:flex;
+    justify-content:flex-start;
+    gap:10px;
+    padding-left:10px;
+
+
+}
+.first_box>div:nth-child(1)>div{
+    border:0px solid black;
+    font-size:10px;
+    display:flex;
+    line-height:1px;
+    flex-direction:column;
+    justify-content:center;   
+    text-align:justify;
+}
+.first_box>div:nth-child(1)>div>h5{
+    font-size:14px;
+    margin-top:10px;
+}
+.first_box>div:nth-child(1)>div>p{
+    margin-top:-5px;
+    font-weight:500;
+}
+.first_box>div:nth-child(1)>img{
+    width:40px;
+    cursor:pointer;
+}
+.first_box>div:nth-child(2){
+    border:0px solid green;
+    height:75%;
+    
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+
+.card_container{
+    margin-top:10px;
+    border:0px solid red;
+    height:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    
+}
+.cards{
+    /* border:1px solid black; */
+    /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+    box-shadow: #3c40434d 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    height:360px;
+    padding:9px;
+    position:relative;
+    background-color:white;
+
+}
+.cards>img{
+    border:0px solid blue;
+    width:100%;
+    height:80%;
+   
+}
+#card_title{
+    text-transform:uppercase;
+    font-size:18px;
+    text-align:justify;
+    margin-bottom:-4px;
+    margin-top:-5px;
+    padding-left:5px;
+}
+.heart{
+    position:absolute;
+    border:0px solid black;
+    height:55px;
+    top:270px;
+    left:200px;
+    width:55px;
+    background-color:white;
+    border-radius:100%;
+    text-align:center;
+    padding-top: 10px;
+    
+
+}
+
+
+.like{
+    font-size:25px;
+    color:blue;    
+    cursor:pointer;
+    border:0px solid black;
+    background:none;
+}
+.like_icon{
+    font-size:30px;
+    color:red;
+}
+/* .cards>div:nth-child(2) */.kanika{
+    border:0px solid black;
+    height:50px;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:10px;
+    padding-left:10px;
+
+}
+/* .cards>div:nth-child(2)>img */.kanika>img{
+    border:1px solid black;
+    width:15%;
+    height:40px;
+    border-radius:100%;
+
+}
+/* .cards>div:nth-child(2) */ .kanika>p{
+    font-weight:bold;
+}
+
+/* @media all and(min-width:1000px)and(max-width:1400px){
+    .main_container{
+        margin-left:-250px;
+    }
+
+
+} */
+@media (max-width:1000px){
+    .main_container{
+        margin-left:-170px;
+    }
+}
+@media (max-width:600px){
+    .card_container{   
+    grid-template-columns:repeat(1,1fr);
+    
+    
+}
+.cards{   
+    
+    height:960px;
+    
+    
+
+}
+.cards>img{
+    border:0px solid blue;
+    width:100%;
+    height:80%;
+   
+}
+#card_title{
+    text-transform:uppercase;
+    font-size:28px;
+    text-align:justify;
+    margin-bottom:-4px;
+    margin-top:-5px;
+    padding-left:5px;
+}
+
+.heart{
+    position:absolute;
+    border:0px solid black;
+    height:105px;
+    top:730px;
+    left:690px;
+    width:75px;
+    background-color:white;
+    border-radius:100%;
+    text-align:center;
+    padding-top: 10px;
+    
+
+}
+
+
+.like{
+    font-size:55px;
+    color:blue;    
+    cursor:pointer;
+    border:0px solid black;
+    background:none;
+}
+.like_icon{
+    font-size:30px;
+    color:red;
+}
+.kanika{
+    border:0px solid black;
+    height:50px;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:10px;
+    padding-left:10px;
+
+}
+.kanika>img{
+    border:1px solid black;
+    width:15%;
+    height:100px;
+    border-radius:100%;
+
+}
+/* .cards>div:nth-child(2) */ .kanika>p{
+    font-weight:bold;
+    font-size:30px;
+}
+
+
+
+}

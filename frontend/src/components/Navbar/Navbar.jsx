@@ -10,12 +10,13 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
+ 
   return (
     <div>
       <div className={styles.navbar_container}>
         <div className={styles.first_box}>
           <div id={styles.logo}>
-            <Link>
+            <Link to="/">
               <img src={logo} alt="logo" />
             </Link>
             {/* LimeRoad */}
