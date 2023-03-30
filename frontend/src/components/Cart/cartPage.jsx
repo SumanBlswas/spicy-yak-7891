@@ -5,6 +5,7 @@ const CartPage = () => {
   return (
     <Box>
         <Heading>Chakra UI</Heading>
+        <Heading>Chakra UI</Heading>
     </Box>
   )
 }

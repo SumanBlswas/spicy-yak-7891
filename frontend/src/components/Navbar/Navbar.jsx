@@ -12,7 +12,7 @@ import { Box, Text } from "@chakra-ui/layout";
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
   return (
-    <Box>
+    <Box pb="28">
       <Box className={styles.navbar_container}>
         <Box className={styles.first_box}>
           <Box id={styles.logo}>
