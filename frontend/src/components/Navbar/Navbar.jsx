@@ -7,7 +7,7 @@ import { FaUser } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "./logo.jpg";
 import { Link } from "react-router-dom";
-import { Box, Text } from "@chakra-ui/layout";
+import { Box, Text } from "@chakra-ui/react";
 
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
