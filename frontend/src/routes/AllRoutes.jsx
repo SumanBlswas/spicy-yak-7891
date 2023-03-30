@@ -2,8 +2,8 @@ import { Box } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import Home from "../pages/Home";
-import CartPage from "../components/Cart/cartPage";
 import Login from "../pages/login";
+import CartPage from "../components/Cart/cartPage";
 
 const AllRoutes = () => {
   return (
