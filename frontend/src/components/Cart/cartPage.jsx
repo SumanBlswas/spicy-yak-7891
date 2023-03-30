@@ -1,7 +1,7 @@
 import React from 'react'
 import {Box, Heading} from "@chakra-ui/react";
 
-const cartPage = () => {
+const CartPage = () => {
   return (
     <Box>
         <Heading>Chakra UI</Heading>
@@ -9,4 +9,4 @@ const cartPage = () => {
   )
 }
 
-export default cartPage
+export default CartPage
