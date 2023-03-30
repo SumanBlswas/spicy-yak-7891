@@ -43,6 +43,11 @@ export default function noteReducer(state = init,{type,payload}){
                     el.title = payload.body.title
                     el.price = payload.body.price
                     el.category = payload.body.category
+                    el.img1 = payload.body.img1
+                    el.brand = payload.body.brand
+                    el.rating = payload.body.rating
+                    el.love_count = payload.body.love_count
+                    el.size = payload.body.size
                 }
                 return el
             })
