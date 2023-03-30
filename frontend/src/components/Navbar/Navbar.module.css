@@ -1,3 +1,8 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
 .navbar_container {
   margin: 0px;
   padding: 0px;
@@ -10,7 +15,7 @@
   height: 13vh;
   justify-content: space-between;
   position: fixed;
-  z-index: -1;
+  z-index: 10;
 }
 .first_box {
   border: 0px solid blue;
@@ -79,7 +84,9 @@
 .second_box > ul > li {
   list-style: none;
   text-transform: uppercase;
-  line-height: 15px;
+  line-height: 10px;
+  display: flex;
+  padding-top:25px;
 }
 .second_box > ul > li > a {
   text-decoration: none;
