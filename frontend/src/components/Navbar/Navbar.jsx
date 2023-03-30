@@ -11,12 +11,21 @@ import { Box, Text } from "@chakra-ui/layout";
 
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
+ 
   return (
+
+    <div>
+      <div className={styles.navbar_container}>
+        <div className={styles.first_box}>
+          <div id={styles.logo}>
+            <Link to="/">
+
     <Box pb="28">
       <Box className={styles.navbar_container}>
         <Box className={styles.first_box}>
           <Box id={styles.logo}>
             <Link>
+
               <img src={logo} alt="logo" />
             </Link>
             {/* LimeRoad */}

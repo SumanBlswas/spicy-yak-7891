@@ -1,0 +1,24 @@
+body{
+    background-color:rgb(232, 247, 247);
+}
+
+.nav{
+    
+    position:relative;
+}
+.home_container{
+    border:0px solid black;
+    height:30px;
+    width:150px;
+    top:90px;
+    left:180px;
+    position:absolute;
+    
+
+}
+.men_women>button{
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+

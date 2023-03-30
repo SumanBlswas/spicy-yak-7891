@@ -15,7 +15,11 @@
   height: 13vh;
   justify-content: space-between;
   position: fixed;
+
+  z-index: 999;
+
   z-index: 10;
+
 }
 .first_box {
   border: 0px solid blue;
@@ -339,12 +343,12 @@
 }
 @media (max-width:450px){
   #logo{
-    margin-left:-270px
+    margin-left:-590px
   }
    .nav_menu_links {
     border: 0px solid black;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    width: 470px;
+    width: 4070px;
     height: 200px;
     left: 0px;
     position: absolute;
@@ -352,3 +356,6 @@
   }
 
 }
+
+
+
