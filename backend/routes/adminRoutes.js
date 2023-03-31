@@ -102,3 +102,5 @@ adminRouter.get("/query", async (req, res) => {
     res.status(404).send({ msg: error.message });
   }
 });
+
+export { adminRouter };
