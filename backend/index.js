@@ -8,6 +8,7 @@ import { menProductRouter } from "./routes/menProductRoutes.js";
 import { womenProductRouter } from "./routes/womenProductRoutes.js";
 import { checker } from "./middlewares/checker.js";
 import { cartRouter } from "./routes/cartRoutes.js";
+import { adminRouter } from "./routes/adminRoutes.js";
 dotenv.config();
 
 const app = express();
@@ -29,6 +30,7 @@ app.get("/", (req, res) => {
 app.use("/users", userRouter);
 app.use("/menproducts", menProductRouter);
 app.use("/womenproducts", womenProductRouter);
+app.use("/admins", adminRouter);
 app.use(checker);
 app.use("/cart", cartRouter);
 
@@ -41,5 +43,3 @@ app.listen(process.env.PORT_NUMBER, async () => {
   }
   console.log(`connected at the port ${process.env.PORT_NUMBER} `);
 });
-
-

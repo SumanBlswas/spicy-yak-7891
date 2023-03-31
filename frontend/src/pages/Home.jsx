@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 // import Footer from "../components/footer/Footer";
 // import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import styles from "./Home.module.css";
 import Men from "./Men";
 import Women from "./Women";
+import { Footer } from "../components/footer/Footer";
 
 const Home = () => {
   const [flag, setFlag] = React.useState(false);
@@ -17,7 +18,7 @@ const Home = () => {
         </div>
         <div className={styles.home_container}>
           <div className={styles.men_women}>
-            <button disabled={flag === true} onClick={() => setFlag(!flag)}>
+            <button disabled={flag===true} onClick={() => setFlag(!flag)}>
               WOMEN
             </button>
             {" | "}
@@ -28,9 +29,9 @@ const Home = () => {
           <div>{flag ? <Women /> : <Men />}</div>
         </div>
       </div>
-      <div className={styles.Footer_Section}>
-        
-      </div>
+      <footer className={styles.Footer_Section}>
+        <Footer/>
+      </footer>
     </div>
   );
 };
