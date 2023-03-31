@@ -14,7 +14,7 @@
     height:90px;
     display:flex;
     flex-direction:row;
-     background-color:rgb(232, 247, 247);
+    /* background-color:rgb(232, 247, 247); */
     margin-bottom:20px;
     
 
@@ -23,6 +23,10 @@
     border:0px solid black;
     width:9%;
     cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
    
 }
 .myfeed>div:nth-child(1){
@@ -38,10 +42,12 @@
     line-height:2px;
     font-weight:400;
     letter-spacing:0.4px;
+    
 }
 .first_box{
     border:0px solid black;
     height:200px;
+   
     
 }
 .first_box>div:nth-child(1){
@@ -52,6 +58,7 @@
     justify-content:flex-start;
     gap:10px;
     padding-left:10px;
+    
 
 
 }
@@ -59,7 +66,7 @@
     border:0px solid black;
     font-size:10px;
     display:flex;
-    line-height:1px;
+    line-height:20px;
     flex-direction:column;
     justify-content:center;   
     text-align:justify;

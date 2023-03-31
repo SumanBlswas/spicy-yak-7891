@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.msFooter{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    line-height: .5;
+}
+
+
+.footerdescription{
+    margin-top: 20px;
+    font-size: 10.5px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+  
+}
