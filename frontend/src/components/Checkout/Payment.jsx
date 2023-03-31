@@ -35,13 +35,6 @@ const Payment = () => {
   const [formErrors, setFormErrors] = useState({firstName: "", lastName: "", city: "", address: "", pinCode: "", country: ""});
   const toast = useToast();
   const navigateTo = useNavigate();
-
-//   useEffect(() => {
-//     setPayableAmount(localStorage.getItem("payableAmount") || 0);
-//     return () => {
-//       localStorage.removeItem("payableAmount");
-//     };
-//   }, []);
  
   const handleSubmit = () => {
     toast({

@@ -1,9 +1,8 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState} from 'react';
 import { useNavigate } from "react-router-dom";
 
 import {
     Box,
-    chakra,
     Container,
     Stack,
     Text,
@@ -15,22 +14,17 @@ import {
     SimpleGrid,
     StackDivider,
     useColorModeValue,
-    VisuallyHidden,
     List,
     ListItem,
   } from '@chakra-ui/react';
-  import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { MdLocalShipping } from 'react-icons/md';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-// import { Context } from '../Components/Context';
   
   export default function Singleproductpage() {
 
     const {id}  = useParams();
     const [data, setData] = useState({});
-    // const {cart, setCart} = useContext(Context)
-    // console.log(cart)
     const navigate = useNavigate()
 
     useEffect(()=>{
@@ -56,7 +50,7 @@ import axios from 'axios';
         // let Price = price.toFixed(2)
         // console.log(price, Mrp)
         // let space =" "
-        let Save = ((Mrp * save)/100) . toFixed(0)
+        let Save = ((Mrp * save)/100).toFixed(0)
     return (
       <Container maxW={'7xl'}>
         <SimpleGrid
