@@ -1,0 +1,38 @@
+body{
+    background-color:rgb(6, 253, 253);
+}
+
+.nav{
+    
+    position:relative;
+}
+.home_container{
+    border:0px solid black;
+    height:30px;
+    width:150px;
+    top:90px;
+    left:180px;
+    position:absolute;
+    
+
+}
+
+
+.men_women>button{
+    /* background:none; */
+    border:none;
+    cursor:pointer;
+}
+
+footer{
+    border:0px solid black;
+    margin-top:4150px;
+}
+
+@media (max-width:1000px){
+   footer{
+    border:2px solid black;
+    margin-left:100px;
+    width:100%;
+   }
+}

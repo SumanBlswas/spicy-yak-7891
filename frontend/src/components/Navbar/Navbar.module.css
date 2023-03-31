@@ -15,7 +15,11 @@
   height: 13vh;
   justify-content: space-between;
   position: fixed;
+
+  z-index: 999;
+
   z-index: 10;
+
 }
 .first_box {
   border: 0px solid blue;
@@ -85,8 +89,11 @@
   list-style: none;
   text-transform: uppercase;
   line-height: 10px;
-  display: flex;
+  display: flex;  
   padding-top:25px;
+  
+  border:0px solid blue;
+  
 }
 .second_box > ul > li > a {
   text-decoration: none;
@@ -95,10 +102,27 @@
   letter-spacing:0.5px;
   font-weight:600;
   color:black;
+  
+  
 }
 .icon {
+ 
   font-size: 20px;
   color: black;
+  border:0px solid blue;
+ 
+  
+  
+}
+#scrapbook{
+  margin-left:20px;
+}
+#search{
+  margin-left:10px;
+
+}
+#profile{
+  margin-left:10px;
 }
 #cart_icon {
   border: 0px solid black;
@@ -107,7 +131,7 @@
 #count {
   position: absolute;
   border: 0px solid black;
-  top: -20px;
+  top: -10px;
   left: 23px;
   width: 22px;
   height: 20px;
@@ -339,12 +363,12 @@
 }
 @media (max-width:450px){
   #logo{
-    margin-left:-270px
+    margin-left:-590px
   }
    .nav_menu_links {
     border: 0px solid black;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    width: 470px;
+    width: 4070px;
     height: 200px;
     left: 0px;
     position: absolute;
@@ -352,3 +376,6 @@
   }
 
 }
+
+
+
