@@ -24,8 +24,7 @@ const Navbar = () => {
       <Box className={styles.navbar_container}>
         <Box className={styles.first_box}>
           <Box id={styles.logo}>
-            <Link>
-
+            <Link to="/">
               <img src={logo} alt="logo" />
             </Link>
             {/* LimeRoad */}
@@ -224,14 +223,14 @@ const Navbar = () => {
           <ul className={styles.second_ul_links}>
             <li>
               <a  href="*">
-                <HiPencil className={styles.icon} />
+                <HiPencil className={styles.icon} id={styles.scrapbook}/>
                 <br />
                 Scrapbook
               </a>
             </li>
             <li>
               <a  href="*">
-                <BiSearchAlt2 className={styles.icon} />
+                <BiSearchAlt2 className={styles.icon} id={styles.search}/>
                 <br />
                 Search
               </a>
@@ -246,7 +245,7 @@ const Navbar = () => {
             </li>
             <li>
               <a  href="*">
-                <FaUser className={styles.icon} />
+                <FaUser className={styles.icon} id={styles.profile}/>
                 <br />
                 profile
               </a>

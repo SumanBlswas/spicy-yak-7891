@@ -1,5 +1,5 @@
 body{
-    background-color:rgb(232, 247, 247);
+    background-color:rgb(6, 253, 253);
 }
 
 .nav{
@@ -16,9 +16,23 @@ body{
     
 
 }
+
+
 .men_women>button{
-    background:none;
+    /* background:none; */
     border:none;
     cursor:pointer;
 }
 
+footer{
+    border:0px solid black;
+    margin-top:4150px;
+}
+
+@media (max-width:1000px){
+   footer{
+    border:2px solid black;
+    margin-left:100px;
+    width:100%;
+   }
+}
