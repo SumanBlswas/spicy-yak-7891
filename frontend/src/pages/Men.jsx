@@ -307,7 +307,7 @@ const handleLike=(id)=>{
                         <img src={el.img1} alt={el.title}/>
                         <div className={styles.heart}>
                            <button className={styles.like} onClick={()=>handleLike(el.id)}>                            
-                            <AiOutlineHeart  className={flag && num==el.id ? styles.like_icon: styles.no_like} />
+                            <AiOutlineHeart  className={flag && num===el.id ? styles.like_icon: styles.no_like} />
                            </button>
                         </div>
                         <div className={styles.kanika}>
