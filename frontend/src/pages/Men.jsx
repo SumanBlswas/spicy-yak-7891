@@ -5,6 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import {AiOutlineHeart} from "react-icons/ai"
 import { Link } from 'react-router-dom';
+import { Box, Text } from '@chakra-ui/react';
 
 
 
@@ -83,65 +84,65 @@ const handleLike=(id)=>{
 
  
   return (
-    <div>
-        <div className={styles.main_container}>
-            <div className={styles.myfeed}>
-                <div className={styles.myfeed_menu}>
+    <Box>
+        <Box className={styles.main_container}>
+            <Box className={styles.myfeed}>
+                <Box className={styles.myfeed_menu}>
                     <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1628498908811.jpg" alt="first"/>
-                    <p>My feed</p>
-                </div>
-                <div className={styles.myfeed_menu}>
+                    <Text>My feed</Text>
+                </Box>
+                <Box className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/tshirts.png" alt="second"/>
-                    <p>T-Shirts</p>
-                </div>
-                <div className={styles.myfeed_menu}>
+                    <Text>T-Shirts</Text>
+                </Box>
+                <Box className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/shirts.png" alt="third"/>
-                    <p>Shirts</p>
-                </div>
-                <div className={styles.myfeed_menu}>
+                    <Text>Shirts</Text>
+                </Box>
+                <Box className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/jeans.png" alt="four"/>
-                    <p>jeans</p>
-                </div>
-                <div className={styles.myfeed_menu}>
+                    <Text>jeans</Text>
+                </Box>
+                <Box className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/trousers.png" alt="five"/>
-                    <p>trousers</p>
-                </div>
-                <div className={styles.myfeed_menu}>
+                    <Text>trousers</Text>
+                </Box>
+                <Box className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/ethnicsets.png" alt="six"/>
-                    <p>ethnic sets</p>
-                </div>
-                <div className={styles.myfeed_menu}>
+                    <Text>ethnic sets</Text>
+                </Box>
+                <Box className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/footwear.png" alt="seven"/>
-                    <p>footwear</p>
-                </div>
-                <div className={styles.myfeed_menu}>
+                    <Text>footwear</Text>
+                </Box>
+                <Box className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/kids.png" alt="eight"/>
-                    <p>kids</p>
-                </div>
-                <div className={styles.myfeed_menu}>
+                    <Text>kids</Text>
+                </Box>
+                <Box className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/women/home.png" alt="nine"/>
-                    <p>home</p>
-                </div>
-                 <div className={styles.myfeed_menu}>
+                    <Text>home</Text>
+                </Box>
+                 <Box className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/accessory.png" alt="ten"/>
-                    <p>accessory</p>
-                </div>
-                <div className={styles.myfeed_menu}>
+                    <Text>accessory</Text>
+                </Box>
+                <Box className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/winter.png" alt="eleven"/>
-                    <p>winter</p>
-                </div>
-            </div>
-            <div className={styles.first_box}>
-                <div>
+                    <Text>winter</Text>
+                </Box>
+            </Box>
+            <Box className={styles.first_box}>
+                <Box>
                    <img src="https://img0.junaroad.com/images/icons/130440_discount.gif" alt="pay-gif"/> 
-                   <div>
+                   <Box>
                     <h5>Pay Online & Get Flat 10% Off</h5>
-                    <p>Paytm, Gpay, PhonePe, Net Banking, Debit & Credit Cards</p>
-                   </div>
-                </div>
-                <div>
+                    <Text>Paytm, Gpay, PhonePe, Net Banking, Debit & Credit Cards</Text>
+                   </Box>
+                </Box>
+                <Box>
                 <Carousel responsive={responsive} style={{ display: "flex" }}>
-              <div>
+              <Box>
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1679910119705.jpg?crsl_pos=0"
                   style={{
@@ -152,8 +153,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                
-              </div>
-              <div>
+              </Box>
+              <Box>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1676008328934.jpg?crsl_pos=0"
@@ -165,8 +166,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                 
-              </div>
-              <div>
+              </Box>
+              <Box>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1667988209100.jpg?crsl_pos=0"
@@ -178,8 +179,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                 
-              </div>
-              <div>
+              </Box>
+              <Box>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1658918101342.jpg?crsl_pos=0    "
@@ -191,8 +192,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                
-              </div>
-              <div>
+              </Box>
+              <Box>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1674029296684.jpg?crsl_pos=0"
@@ -204,8 +205,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
               
-              </div>
-              <div>
+              </Box>
+              <Box>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1674029296684.jpg?crsl_pos=0"
@@ -217,8 +218,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                
-              </div>
-              <div>
+              </Box>
+              <Box>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1677239926933.jpg?crsl_pos=0"
@@ -230,8 +231,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                 
-              </div>
-              <div>
+              </Box>
+              <Box>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1651469168362.jpg?crsl_pos=0"
@@ -243,8 +244,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
               
-              </div>
-              <div>
+              </Box>
+              <Box>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1676438894037.jpg?crsl_pos=0"
@@ -256,8 +257,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                 
-              </div>
-              <div>
+              </Box>
+              <Box>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1678466728484.jpg?crsl_pos=0"
@@ -269,8 +270,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                 
-              </div>
-              <div>
+              </Box>
+              <Box>
                 {" "}
                 <img
                   src="https://img0.junaroad.com/images/banners/B2G1_13january2023_1673587401792.jpg?crsl_pos=0"
@@ -282,8 +283,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                
-              </div>
-              <div>
+              </Box>
+              <Box>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1657276563582.jpg?page_id=2391766&crsl_pos=1"
@@ -295,34 +296,34 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                
-              </div>
+              </Box>
             </Carousel>
 
-                </div>
-                <div className={styles.card_container}>
+                </Box>
+                <Box className={styles.card_container}>
                    {images.length>0 && images.map((el,index)=>{
 
-                    return <Link><div key={index} className={styles.cards}>
-                        <p id={styles.card_title}>{el.title}</p>
+                    return <Link><Box key={index} className={styles.cards}>
+                        <Text id={styles.card_title}>{el.title}</Text>
                         <img src={el.img1} alt={el.title}/>
-                        <div className={styles.heart}>
+                        <Box className={styles.heart}>
                            <button className={styles.like} onClick={()=>handleLike(el.id)}>                            
                             <AiOutlineHeart  className={flag && num==el.id ? styles.like_icon: styles.no_like} />
                            </button>
-                        </div>
-                        <div className={styles.kanika}>
+                        </Box>
+                        <Box className={styles.kanika}>
                             <img src={el.img2} alt={el.title2}/>
-                            <p>{el.title2}</p>
-                        </div>
-                    </div></Link>
+                            <Text>{el.title2}</Text>
+                        </Box>
+                    </Box></Link>
                    })} 
 
-                </div>
+                </Box>
                 
-            </div>
+            </Box>
 
-        </div>
-    </div>
+        </Box>
+    </Box>
   )
 }
 
