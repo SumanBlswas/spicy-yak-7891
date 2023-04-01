@@ -7,7 +7,6 @@ import {AiOutlineHeart} from "react-icons/ai"
 import { Link } from 'react-router-dom';
 
 
-
 const images=[
     {id:"1",title:"#freshfav Additions",img1:"https://img0.junaroad.com/stories/story_p_641adf0cf3805708287887f4-1679484564.jpeg",img2:"https://img1.junaroad.com/user_profile/32.jpg",title2:"By Shivangini"},
     {id:"2",title:"counting on # themidnighth...",img1:"https://img2.junaroad.com/stories/story_p_6416d76bf38057081c082896-1679980823.jpeg",img2:"https://img1.junaroad.com/user_profile/32.jpg",title2:"By Shivangini"},

@@ -22,6 +22,7 @@ const CartPage = () => {
         ml="5"
         mr="5"
         objectFit={"contain"}
+        pt="28"
       >
         <GridItem colSpan={3} h="auto" bg="tomato">
           <Heading>Cart Item</Heading>

@@ -1,11 +1,11 @@
 import React from "react";
 // import Footer from "../components/footer/Footer";
 // import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar/Navbar";
 import styles from "./Home.module.css";
 import Men from "./Men";
 import Women from "./Women";
 import { Footer } from "../components/footer/Footer";
+import Navbar from "../components/Navbar/Navbar";
 
 const Home = () => {
   const [flag, setFlag] = React.useState(false);

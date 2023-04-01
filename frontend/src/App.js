@@ -7,7 +7,7 @@ function App() {
     <div className="App"> 
     {/* <Navbar/>        */}
       <AllRoutes/>  
-      <Singleproductpage/>
+      {/* <Singleproductpage/> */}
     </div>
   )
 
