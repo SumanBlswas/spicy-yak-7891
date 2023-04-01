@@ -9,8 +9,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Navbar from "../Navbar/Navbar";
+import {useSelector} from "react-redux";
 
 const CartPage = () => {
+  const nxt = useSelector((store) => console.log(store.cartReducer.cart))
   let value = "00";
   let tax = 200;
   return (

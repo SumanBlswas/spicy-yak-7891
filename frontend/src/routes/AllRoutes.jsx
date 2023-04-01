@@ -8,6 +8,7 @@ import Payment from "../components/Checkout/Payment";
 import Admin from "../pages/Admin";
 import Product from "../pages/Product";
 import Navbar from "../components/Navbar/Navbar";
+import SignUp from "../pages/SignUp";
 
 const AllRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const AllRoutes = () => {
           <Route path={"/product"} element={<Product/>}/>
           <Route path={"/payment"} element={<Payment />} />
           <Route path='/admin' element={<Admin/>} />
+          <Route path='/signup' element={<SignUp/>} />
         </Routes>
       </Box>
   );
