@@ -8,7 +8,7 @@ import Admin from "../pages/Admin";
 import Product from "../pages/Product";
 import { Box } from "@chakra-ui/react";
 import Navbar from "../components/Navbar/Navbar";
-import { Footer } from "../components/footer/Footer";
+// import { Footer } from "../components/footer/Footer";
 import Account from "../components/Account/Account";
 
 const AllRoutes = () => {
@@ -22,7 +22,7 @@ const AllRoutes = () => {
         <Route path={"/product"} element={<Product />} />
         <Route path={"/payment"} element={<Payment />} />
         <Route path="/admin" element={<Admin />} />
-        <Route path={"/acount"} element={<Account />} />
+        <Route path={"/account"} element={<Account />} />
       </Routes>
       {/* <Footer /> */}
     </Box>
