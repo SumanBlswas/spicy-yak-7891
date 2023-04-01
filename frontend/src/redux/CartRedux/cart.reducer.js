@@ -10,7 +10,7 @@ const init = {
 }
 
 
-export default function noteReducer(state = init,{type,payload}){
+export default function cartReducer(state = init,{type,payload}){
 
     switch(type){
 
@@ -20,23 +20,16 @@ export default function noteReducer(state = init,{type,payload}){
         case types.LOADING:{
             return {...state,CartError:false,loading:true,isAdd:false,isDelete:false,isPatch:false}
         }
-
         case types.CART:{
-            
             return {...state, CartError:false,loading:false,cart:payload}
         }
-
         case types.ADD_CART:{
-           
             return {...state,CartError:false,loading:false,cart:[...state.cart,payload],isAdd:true}
         }
-
         case types.DELETE_CART:{
             const arr = state.cart.filter((el)=>el._id !== payload)
             return {...state, CartError:false,loading:false,cart:arr, isDelete:true}
         }
-
-
         case types.PATCH_CART:{
             const arr1 = state.cart.map((el)=>{
                 if(el._id === payload.id){
