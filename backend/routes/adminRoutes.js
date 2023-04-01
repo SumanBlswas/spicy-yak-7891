@@ -62,7 +62,7 @@ adminRouter.post("/login", async (req, res) => {
   }
 });
 
-adminRouter.get("/updates/:adminID", async (req, res) => {
+adminRouter.patch("/updates/:adminID", async (req, res) => {
   let payload = req.body;
   let { adminID } = req.params;
   try {
@@ -73,7 +73,7 @@ adminRouter.get("/updates/:adminID", async (req, res) => {
   }
 });
 
-adminRouter.get("/delete/:adminID", async (req, res) => {
+adminRouter.delete("/delete/:adminID", async (req, res) => {
   let { adminID } = req.params;
   try {
     await adminModel.findByIdAndDelete({ _id: adminID });
