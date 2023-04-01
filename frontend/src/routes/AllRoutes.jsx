@@ -7,7 +7,7 @@ import Home from "../pages/Home";
 
 import Login from "../pages/login";
 import CartPage from "../components/Cart/cartPage";
-// import Product from "../pages/Product";
+import Product from "../pages/Product";
 
 
 const AllRoutes = () => {
@@ -20,7 +20,7 @@ const AllRoutes = () => {
 
         <Route path={"/cart"} element={<CartPage />} />
         <Route path={"/login"} element={<Login />} />
-        {/* <Route path={"/product"} element={<Product/>}/> */}
+        <Route path={"/product"} element={<Product/>}/>
 
       </Routes>
     

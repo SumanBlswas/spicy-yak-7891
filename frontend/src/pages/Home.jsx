@@ -9,6 +9,7 @@ import { Footer } from "../components/footer/Footer";
 
 const Home = () => {
   const [flag, setFlag] = React.useState(false);
+  console.log(flag)
   return (
     <div>
       {" "}
@@ -29,7 +30,7 @@ const Home = () => {
           <div>{flag ? <Women /> : <Men />}</div>
         </div>
       </div>
-      <footer className={styles.Footer_Section}>
+      <footer className={flag ? styles.FooterWomen:styles.Footer_Section}>
         <Footer/>
       </footer>
     </div>

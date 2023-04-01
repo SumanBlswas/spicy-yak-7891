@@ -24,9 +24,12 @@ body{
     cursor:pointer;
 }
 
-footer{
+.Footer_Section{
     border:0px solid black;
     margin-top:4150px;
+}
+.FooterWomen{
+    margin-top:3000px;
 }
 
 @media (max-width:1000px){
