@@ -89,8 +89,7 @@
   text-transform: uppercase;
   line-height: 10px;
   display: flex;  
-  padding-top:25px;
-  
+  padding-top:30px;
   border:0px solid blue;
   
 }
@@ -105,12 +104,9 @@
   
 }
 .icon {
- 
   font-size: 20px;
   color: black;
   border:0px solid blue;
- 
-  
   
 }
 #scrapbook{

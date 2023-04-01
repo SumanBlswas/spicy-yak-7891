@@ -1,10 +1,5 @@
-body{
-    /* background-color:rgb(6, 253, 253); */
-}
-
-.nav{
-    
-    /* position:relative; */
+.nav{   
+    position:relative;
 }
 .home_container{
     border:0px solid black;
@@ -12,9 +7,7 @@ body{
     width:150px;
     top:90px;
     left:180px;
-    /*  position:absolute; */
-    
-
+    position:absolute;
 }
 
 
@@ -22,18 +15,14 @@ body{
     /* background:none; */
     border:none;
     cursor:pointer;
-
 }
 
 .Footer_Section{
-   
+    border:0px solid black;
+    margin-top:4150px;
 }
-/* .FooterWomen{
+.FooterWomen{
     margin-top:3000px;
-} */
-.menFooter{
-    border:1px solid black;
-    /* margin-top:100px; */
 }
 
 @media (max-width:1000px){

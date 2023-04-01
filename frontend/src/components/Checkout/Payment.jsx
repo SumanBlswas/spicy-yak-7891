@@ -35,13 +35,6 @@ const Payment = () => {
   const [formErrors, setFormErrors] = useState({firstName: "", lastName: "", city: "", address: "", pinCode: "", country: ""});
   const toast = useToast();
   const navigateTo = useNavigate();
-
-//   useEffect(() => {
-//     setPayableAmount(localStorage.getItem("payableAmount") || 0);
-//     return () => {
-//       localStorage.removeItem("payableAmount");
-//     };
-//   }, []);
  
   const handleSubmit = () => {
     toast({
@@ -95,7 +88,7 @@ const Payment = () => {
   return (
     <Box w="100%" margin='auto'>
         <Navbar/>
-    <Box display={'grid'} gridTemplateColumns={['repeat(1,1fr)','repeat(1,1fr)','repeat(1,1fr)','repeat(2,1fr)','repeat(2,1fr)']}>
+    <Box display={'grid'} gridTemplateColumns={['repeat(1,1fr)','repeat(1,1fr)','repeat(1,1fr)','repeat(2,1fr)','repeat(2,1fr)']} pt="20">
         <Box 
             pt="20"
             ml={["10",'40','40','40','40','60','80','100']}
