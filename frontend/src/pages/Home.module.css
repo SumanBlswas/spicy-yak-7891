@@ -1,9 +1,4 @@
-body{
-    background-color:rgb(6, 253, 253);
-}
-
-.nav{
-    
+.nav{   
     position:relative;
 }
 .home_container{
@@ -13,8 +8,6 @@ body{
     top:90px;
     left:180px;
     position:absolute;
-    
-
 }
 
 

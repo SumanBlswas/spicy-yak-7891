@@ -30,7 +30,8 @@ const CartPage = () => {
         <GridItem
           colSpan={2}
           h="auto"
-          bg="papayawhip"
+          boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px;'}
+          borderRadius={5}
           fontSize={["xs", "sm", "sm", "md", "md", "lg"]}
         >
           <Text as="b" fontSize="xl" textAlign={"start"}>
@@ -62,7 +63,7 @@ const CartPage = () => {
             </Text>
             <Text as="b" color="green.500">{`₹${tax}`}</Text>
           </Flex>
-          <Button colorScheme="red" m="4">
+          <Button colorScheme="red" m="4" pl='10' pr='10' pt='3' pb='3'>
             BUY NOW
           </Button>
         </GridItem>
