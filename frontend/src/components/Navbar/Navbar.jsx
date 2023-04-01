@@ -209,29 +209,21 @@ const Navbar = () => {
         <Box className={styles.second_box}>
           <ul className={styles.second_ul_links}>
             <li>
-              <a
-                href="*"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  placeItems:"center"
-                }}
-              >
+              <a href="*" style={{display:'flex',flexDirection:"column",placeItems:"center"}}>
                 <HiPencil className={styles.icon} />
                 <br />
                 Scrapbook
               </a>
             </li>
             <li>
-              <a href="*">
+              <a href="*" style={{display:'flex',flexDirection:"column",placeItems:"center"}}>
                 <BiSearchAlt2 className={styles.icon} />
                 <br />
                 Search
               </a>
             </li>
             <li>
-              <a href="*" id={styles.cart_icon}>
+              <a href="*" id={styles.cart_icon} style={{display:'flex',flexDirection:"column",placeItems:"center"}}>
                 <AiOutlineShoppingCart className={styles.icon} />
                 <span id={styles.count}>0</span>
                 <br />
@@ -239,7 +231,7 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="*">
+              <a href="*" style={{display:'flex',flexDirection:"column",placeItems:"center"}}>
                 <FaUser className={styles.icon} />
                 <br />
                 profile
