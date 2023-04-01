@@ -12,10 +12,11 @@ import {
   Heading,
   Text,
   useColorModeValue,
-  Link,
+  // Link,
   useToast,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import axios from "axios";
 
@@ -54,13 +55,15 @@ export default function SignUp() {
   return (
     <Flex
       minH={"100vh"}
+      // minW={"1000vh"}
+      // marginTop={"200px"}
       align={"center"}
       justify={"center"}
       bg={useColorModeValue("gray.50", "gray.800")}
     >
       <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
         <Stack align={"center"}>
-          <Heading fontSize={"4xl"} textAlign={"center"}>
+          <Heading marginTop={"70px"} fontSize={"4xl"} textAlign={"center"}>
             Sign up
           </Heading>
           <Text fontSize={"lg"} color={"gray.600"}>
@@ -72,6 +75,8 @@ export default function SignUp() {
           bg={useColorModeValue("white", "gray.700")}
           boxShadow={"lg"}
           p={8}
+          // width={"500px"}
+          // minW={"100vh"}
         >
           <Stack spacing={4}>
             <HStack>
@@ -81,6 +86,7 @@ export default function SignUp() {
                   <Input
                     type="text"
                     value={name}
+                    width={"400px"}
                     onChange={(e) => setName(e.target.value)}
                   />
                 </FormControl>
@@ -146,7 +152,7 @@ export default function SignUp() {
             </Stack>
             <Stack pt={6}>
               <Text align={"center"}>
-                Already a user? <Link color={"#99cc33"}>Login</Link>
+                Already a user? <Link to="/login" style={{color:"#99cc33", fontSize: "17px", textDecorationLine : "underline"}}  >Login</Link>
               </Text>
             </Stack>
           </Stack>

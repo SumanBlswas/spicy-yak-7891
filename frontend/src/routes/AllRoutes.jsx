@@ -9,6 +9,8 @@ import Product from "../pages/Product";
 import Navbar from "../components/Navbar/Navbar";
 import SignUp from "../pages/SignUp";
 import { Box } from "@chakra-ui/react";
+import Singleproductpage from "../pages/SingleProductPage";
+// import SingleProduct from "../components/Admin/AdminSingleProduct";
 
 const AllRoutes = () => {
   return (
@@ -22,6 +24,7 @@ const AllRoutes = () => {
         <Route path={"/payment"} element={<Payment />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path={"/product/:id"} element={<Singleproductpage/>} />
       </Routes>
     </Box>
   );

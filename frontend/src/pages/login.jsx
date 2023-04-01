@@ -113,7 +113,7 @@ export default function Login() {
             </Stack>
             <Text fontSize={"lg"} color={"gray.600"}>
               Don't have an account?{" "}
-              <Link color={"#99cc33"} to="/signup">
+              <Link style={{color:"#99cc33", fontSize: "17px", textDecorationLine : "underline"}}  to="/signup">
                 Sign up
               </Link>
             </Text>
