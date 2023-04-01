@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 // import Footer from "../components/footer/Footer";
 // import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
@@ -9,7 +9,6 @@ import { Footer } from "../components/footer/Footer";
 
 const Home = () => {
   const [flag, setFlag] = React.useState(false);
-  console.log(flag)
   return (
     <div>
       {" "}
@@ -27,12 +26,12 @@ const Home = () => {
               MEN
             </button>
           </div>
-          <div>{flag ? <Women /> : <Men />}</div>
+          {/* <div>{flag ? <Women /> : <Men />}</div> */}
         </div>
       </div>
-      <footer className={flag ? styles.FooterWomen:styles.Footer_Section}>
+      {/* <footer className={styles.Footer_Section}>
         <Footer/>
-      </footer>
+      </footer> */}
     </div>
   );
 };

@@ -3,10 +3,10 @@
     border:0px solid black;
     width:1000px;
     height:auto;
-    margin-top:10px;
-    margin-left:-50px;    
+    /* margin-top:10px; */
+    /* margin-left:-50px;     */
     padding-top:5px;
-    /* margin:auto; */
+    margin:auto;
 }
 .myfeed{
     padding-top:10px;    
@@ -106,7 +106,7 @@ a{
     /* border:5px solid red; */
     /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
     box-shadow: #3c40434d 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    height:360px;
+    height:390px;
     padding:9px;
     position:relative;
     background-color:white;
