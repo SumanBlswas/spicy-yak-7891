@@ -8,6 +8,7 @@ import Admin from "../pages/Admin";
 import Product from "../pages/Product";
 import Navbar from "../components/Navbar/Navbar";
 import SignUp from "../pages/SignUp";
+import { Box } from "@chakra-ui/react";
 
 const AllRoutes = () => {
   return (
