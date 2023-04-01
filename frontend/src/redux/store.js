@@ -5,12 +5,14 @@ import {
   applyMiddleware,
 } from "redux";
 
-// import { useSelector, useDispatch } from "react-redux";
-
+import { reducer as adminReducer} from "./Admin/reducer";
+import  cartReducer from "./CartRedux/cart.reducer";
 import thunk from "redux-thunk";
-
-const root = combineReducers({});
-
+import { mensProductReducer } from "./Product/Product.reducer";
+const root = combineReducers({
+   mens: mensProductReducer,
+   adminReducer,
+   cartReducer
+});
 const store = legacy_createStore(root, compose(applyMiddleware(thunk)));
-
 export { store };

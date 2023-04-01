@@ -1,9 +1,4 @@
-body{
-    background-color:rgb(6, 253, 253);
-}
-
-.nav{
-    
+.nav{   
     position:relative;
 }
 .home_container{
@@ -13,8 +8,6 @@ body{
     top:90px;
     left:180px;
     position:absolute;
-    
-
 }
 
 
@@ -24,9 +17,12 @@ body{
     cursor:pointer;
 }
 
-footer{
+.Footer_Section{
     border:0px solid black;
     margin-top:4150px;
+}
+.FooterWomen{
+    margin-top:3000px;
 }
 
 @media (max-width:1000px){

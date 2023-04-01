@@ -15,10 +15,9 @@
   height: 13vh;
   justify-content: space-between;
   position: fixed;
-
   z-index: 999;
 
-  z-index: 10;
+ 
 
 }
 .first_box {
@@ -90,8 +89,7 @@
   text-transform: uppercase;
   line-height: 10px;
   display: flex;  
-  padding-top:25px;
-  
+  padding-top:30px;
   border:0px solid blue;
   
 }
@@ -106,12 +104,9 @@
   
 }
 .icon {
- 
   font-size: 20px;
   color: black;
   border:0px solid blue;
- 
-  
   
 }
 #scrapbook{
@@ -363,7 +358,7 @@
 }
 @media (max-width:450px){
   #logo{
-    margin-left:-590px
+    margin-left:-250px
   }
    .nav_menu_links {
     border: 0px solid black;
