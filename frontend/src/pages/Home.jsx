@@ -15,9 +15,9 @@ const Home = () => {
     <div>
       {" "}
       <div className={styles.main_container}>
-        <div className={styles.nav}>
+        {/* <div className={styles.nav}>
           <Navbar />
-        </div>
+        </div> */}
         <Center>
           <div>
             <div className={styles.men_women} textAl>
