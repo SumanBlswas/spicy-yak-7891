@@ -6,12 +6,11 @@ import {
 } from "redux";
 
 import { reducer as adminReducer} from "./Admin/reducer";
-// import { useSelector, useDispatch } from "react-redux";
-
 import thunk from "redux-thunk";
-
-const root = combineReducers({adminReducer});
-
+import { mensProductReducer } from "./Product/Product.reducer";
+const root = combineReducers({
+   mens: mensProductReducer,
+   adminReducer
+});
 const store = legacy_createStore(root, compose(applyMiddleware(thunk)));
-
 export { store };

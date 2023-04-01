@@ -9,6 +9,7 @@ import { Footer } from "../components/footer/Footer";
 
 const Home = () => {
   const [flag, setFlag] = React.useState(false);
+  console.log(flag);
   return (
     <div>
       <div className={styles.main_container}>
