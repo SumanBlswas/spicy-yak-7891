@@ -15,9 +15,9 @@ const Home = () => {
     <div>
       {" "}
       <div className={styles.main_container}>
-        <div className={styles.nav}>
+        {/* <div className={styles.nav}>
           <Navbar />
-        </div>
+        </div> */}
         <Center>
           <Box pt='36'>
             <Box className={styles.men_women} diplay="flex" textAlign='start' ml='-8'>
