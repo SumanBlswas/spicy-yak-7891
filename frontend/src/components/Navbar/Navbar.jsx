@@ -209,7 +209,15 @@ const Navbar = () => {
         <Box className={styles.second_box}>
           <ul className={styles.second_ul_links}>
             <li>
-              <a href="*">
+              <a
+                href="*"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  placeItems:"center"
+                }}
+              >
                 <HiPencil className={styles.icon} />
                 <br />
                 Scrapbook
