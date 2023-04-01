@@ -10,7 +10,7 @@ import Navbar from "../components/Navbar/Navbar";
 
 const Home = () => {
   const [flag, setFlag] = React.useState(false);
-  console.log(flag);
+  // console.log(flag);
   return (
     <div>
       {" "}
