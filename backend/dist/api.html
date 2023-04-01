@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Endpoints</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+    }
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+    a {
+      text-decoration-line: none;
+    }
+    a > h1 {
+      color: black;
+    }
+    .admin > ol {
+      display: block;
+    }
+  </style>
+  <body>
+    <a href="https://maroon-sea-urchin-tam.cyclic.app/"><h1>Hello APIs</h1></a>
+    <div class="main">
+      <div>
+        <h2>Users API Endpoints</h2>
+        <ol>
+          <li>
+            <div>
+              <p>GET ALL THE USERS</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/users"
+                >https://maroon-sea-urchin-tam.cyclic.app/users</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>REGISTER A USER</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/users/register"
+                >https://maroon-sea-urchin-tam.cyclic.app/users/register</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>LOGIN A USER</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/users/login"
+                >https://maroon-sea-urchin-tam.cyclic.app/users/login</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>UPDATE A USER</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/users/updates"
+                >https://maroon-sea-urchin-tam.cyclic.app/users/updates/:userID</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>DELETE A USER</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/users/delete"
+                >https://maroon-sea-urchin-tam.cyclic.app/users/delete/:userID</a
+              >
+            </div>
+          </li>
+        </ol>
+      </div>
+      <!-- //======================================================// -->
+      <div class="admin">
+        <h2>Admin API Endpoints</h2>
+        <ol>
+          <li>
+            <div>
+              <p>GET ALL THE ADMINS</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/admins"
+                >https://maroon-sea-urchin-tam.cyclic.app/admins</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>REGISTER ADMIN</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/admins/add"
+                >https://maroon-sea-urchin-tam.cyclic.app/admins/add</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>LOGIN ADMIN</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/admins/login"
+                >https://maroon-sea-urchin-tam.cyclic.app/admins/login</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>UPDATE A ADMIN</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/admins/updates"
+                >https://maroon-sea-urchin-tam.cyclic.app/admins/updates/:adminID</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>DELETE A PRODUCT</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/admins/delete"
+                >https://maroon-sea-urchin-tam.cyclic.app/admins/delete/:adminID</a
+              >
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="main">
+      <div>
+        <h2>Cart API Endpoints</h2>
+        <ol>
+          <li>
+            <div>
+              <p>GET ALL THE USERS</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/cart"
+                >https://maroon-sea-urchin-tam.cyclic.app/cart</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Add A Item into Cart</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/cart/add"
+                >https://maroon-sea-urchin-tam.cyclic.app/cart/add</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>UPDATE A Item from Cart</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/cart/updates"
+                >https://maroon-sea-urchin-tam.cyclic.app/cart/updates/:userID</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>DELETE A Item from Cart</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/cart/delete"
+                >https://maroon-sea-urchin-tam.cyclic.app/cart/delete/:userID</a
+              >
+            </div>
+          </li>
+        </ol>
+      </div>
+      <!-- //======================================================// -->
+      <div>
+        <h2>Products API Endpoints</h2>
+        <ol>
+          <li>
+            <div>
+              <p>GET ALL THE MEN'S PRODUCTS</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/menproducts"
+                >https://maroon-sea-urchin-tam.cyclic.app/menproducts</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>POST A PRODUCT</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/menproducts/add"
+                >https://maroon-sea-urchin-tam.cyclic.app/menproducts/add</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>UPDATE A PRODUCT</p>
+              <a
+                href="https://maroon-sea-urchin-tam.cyclic.app/menproducts/updates"
+                >https://maroon-sea-urchin-tam.cyclic.app/menproducts/updates/:userID</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>DELETE A PRODUCT</p>
+              <a
+                href="https://maroon-sea-urchin-tam.cyclic.app/menproducts/delete"
+                >https://maroon-sea-urchin-tam.cyclic.app/menproducts/delete/:userID</a
+              >
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>

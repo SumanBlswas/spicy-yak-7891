@@ -1,14 +1,17 @@
-import { Box } from "@chakra-ui/react";
 import "./App.css";
-import Home from "./pages/Home";
-import AllRoutes from "./routes/AllRoutes";
 
+import Navbar from "./components/Navbar/Navbar.jsx";
+import AllRoutes from "./routes/AllRoutes";
+import Singleproductpage from "./pages/SingleProductPage";
 function App() {
   return (
-    <Box className="App">
-      <AllRoutes />
-    </Box>
-  );
+    <div className="App">  
+    {/* <Navbar/>        */}
+      <AllRoutes/>  
+      <Singleproductpage/>
+    </div>
+  )
+
 }
 
 export default App;

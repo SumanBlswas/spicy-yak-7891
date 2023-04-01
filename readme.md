@@ -2,6 +2,8 @@
   Project====>\ Clone of LimeRoad
                 A Ecommerce Website for Mens, Womens & Kids
 
+## StyloZone(Clone of LimeRoad)
+
 ## Project Members
   ++ Suman Biswas (Team Leader)
                             ========>\ Will build Backend Side
@@ -11,7 +13,7 @@
 
 
   ++ Ayush Kaushik
-                            =========>\ Will build Frontend Side
+                            =========>\ Will build Navbar and HomePage
 
 
   ++ Satyam Kumar Jha
@@ -19,14 +21,15 @@
 
 
   ++ Kartik Jain
-                            =========>\ Will build Login Page & Single Product Page
+                            =========>\ Will build Login Page
 
 ## Project IA
   ++ Sumit Beniwal
 
 ## First Day Work
+  ++Backend
 
-  ++ is to build all the folder structure of the coedbase
+  ++ is to build all the folder structure of the codebase
 
   ++ link with github
   
@@ -35,4 +38,22 @@
 
 ## Second Day Work
 
-  ++ Will be Updated Soon...
+  ++Backend
+
+  ++ have built most of the endpoints
+
+  ++ done with 
+  
+              ++ user
+
+              ++ menProduct
+
+              ++ womenProduct
+
+              ++ cart
+  
+  ++ built a html page where you can find all of the endpoints
+
+  ++Frontend
+
+  
