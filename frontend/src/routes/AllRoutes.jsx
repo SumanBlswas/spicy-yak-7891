@@ -6,17 +6,23 @@ import CartPage from "../components/Cart/cartPage";
 import Payment from "../components/Checkout/Payment";
 import Admin from "../pages/Admin";
 import Product from "../pages/Product";
+import Navbar from "../components/Navbar/Navbar";
+import SignUp from "../pages/SignUp";
 
 const AllRoutes = () => {
   return (
-    <Routes>
-      <Route path={"/"} element={<Home />} />
-      <Route path={"/cart"} element={<CartPage />} />
-      <Route path={"/login"} element={<Login />} />
-      <Route path={"/product"} element={<Product />} />
-      <Route path={"/payment"} element={<Payment />} />
-      <Route path="/admin" element={<Admin />} />
-    </Routes>
+      <Box>
+        <Navbar/>
+        <Routes>
+          <Route path={"/"} element={<Home />} />        
+          <Route path={"/cart"} element={<CartPage />} />
+          <Route path={"/login"} element={<Login />} />
+          <Route path={"/product"} element={<Product/>}/>
+          <Route path={"/payment"} element={<Payment />} />
+          <Route path='/admin' element={<Admin/>} />
+          <Route path='/signup' element={<SignUp/>} />
+        </Routes>
+      </Box>
   );
 };
 

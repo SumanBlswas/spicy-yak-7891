@@ -17,7 +17,7 @@ const Navbar = () => {
       <Box className={styles.navbar_container}>
         <Box className={styles.first_box}>
           <Box id={styles.logo}>
-            <Link>
+            <Link to="/">
               <img src={logo} alt="logo" />
             </Link>
           </Box>
@@ -223,12 +223,12 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="*" id={styles.cart_icon} style={{display:'flex',flexDirection:"column",placeItems:"center"}}>
+              <Link as={'a'} to="/cart" id={styles.cart_icon} style={{display:'flex',flexDirection:"column",placeItems:"center"}}>
                 <AiOutlineShoppingCart className={styles.icon} />
                 <span id={styles.count}>0</span>
                 <br />
                 Cart
-              </a>
+              </Link>
             </li>
             <li>
               <a href="*" style={{display:'flex',flexDirection:"column",placeItems:"center"}}>
@@ -238,9 +238,9 @@ const Navbar = () => {
               </a>
               <Box className={styles.profile_menu}>
                 <h3>Welcome</h3>
-                <a href="*">Login</a>
+                <Link to="/login">Login</Link>
                 <button>Logout</button>
-                <a href="*">Admin</a>
+                <Link>Admin</Link>
               </Box>
             </li>
           </ul>
