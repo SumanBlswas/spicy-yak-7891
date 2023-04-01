@@ -24,7 +24,7 @@
       color: black;
     }
     .admin > ol {
-      display: none;
+      display: block;
     }
   </style>
   <body>
@@ -76,40 +76,46 @@
         </ol>
       </div>
       <!-- //======================================================// -->
-      <div>
-        <h2>Products API Endpoints</h2>
+      <div class="admin">
+        <h2>Admin API Endpoints</h2>
         <ol>
           <li>
             <div>
-              <p>GET ALL THE MEN'S PRODUCTS</p>
-              <a href="https://maroon-sea-urchin-tam.cyclic.app/menproducts"
-                >https://maroon-sea-urchin-tam.cyclic.app/menproducts</a
+              <p>GET ALL THE ADMINS</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/admins"
+                >https://maroon-sea-urchin-tam.cyclic.app/admins</a
               >
             </div>
           </li>
           <li>
             <div>
-              <p>POST A PRODUCT</p>
-              <a href="https://maroon-sea-urchin-tam.cyclic.app/menproducts/add"
-                >https://maroon-sea-urchin-tam.cyclic.app/menproducts/add</a
+              <p>REGISTER ADMIN</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/admins/add"
+                >https://maroon-sea-urchin-tam.cyclic.app/admins/add</a
               >
             </div>
           </li>
           <li>
             <div>
-              <p>UPDATE A PRODUCT</p>
-              <a
-                href="https://maroon-sea-urchin-tam.cyclic.app/menproducts/updates"
-                >https://maroon-sea-urchin-tam.cyclic.app/menproducts/updates/:userID</a
+              <p>LOGIN ADMIN</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/admins/login"
+                >https://maroon-sea-urchin-tam.cyclic.app/admins/login</a
+              >
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>UPDATE A ADMIN</p>
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/admins/updates"
+                >https://maroon-sea-urchin-tam.cyclic.app/admins/updates/:adminID</a
               >
             </div>
           </li>
           <li>
             <div>
               <p>DELETE A PRODUCT</p>
-              <a
-                href="https://maroon-sea-urchin-tam.cyclic.app/menproducts/delete"
-                >https://maroon-sea-urchin-tam.cyclic.app/menproducts/delete/:userID</a
+              <a href="https://maroon-sea-urchin-tam.cyclic.app/admins/delete"
+                >https://maroon-sea-urchin-tam.cyclic.app/admins/delete/:adminID</a
               >
             </div>
           </li>
@@ -155,9 +161,8 @@
         </ol>
       </div>
       <!-- //======================================================// -->
-      <div class="admin">
-        <h2>Admin API Endpoints</h2>
-        <h3>Work is in progress, see you soon</h3>
+      <div>
+        <h2>Products API Endpoints</h2>
         <ol>
           <li>
             <div>
