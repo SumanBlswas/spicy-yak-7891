@@ -13,7 +13,7 @@ adminRouter.get("/", async (req, res) => {
 });
 
 adminRouter.post("/add", async (req, res) => {
-  const { name, email, password, age, gender, position } = req.body;
+  const { name, email, password, age, gender, position, img } = req.body;
   try {
     bcrypt.hash(password, 5, async (err, hash) => {
       let admin = new adminModel({
@@ -23,6 +23,7 @@ adminRouter.post("/add", async (req, res) => {
         age,
         gender,
         position,
+        img
       });
       await admin.save();
       res.status(200).send({ msg: "New admin has been added" });
