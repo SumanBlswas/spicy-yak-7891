@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import styles from "./Men.module.css"
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import {AiOutlineHeart} from "react-icons/ai"
 import { Link } from 'react-router-dom';
-import { Box, Text } from '@chakra-ui/react';
+
+
 
 const images=[
     {id:"1",title:"All day,everyday basics",img1:"https://img0.junaroad.com/stories/story_p_640ed6e5f38057080fc170e9-1678877793.jpeg",img2:"https://img0.junaroad.com/user_profile/mid_profile_5e0dd26e6f4a945d2dad2652-1577965834.png",title2:"By Kanika.Crystal"},
@@ -81,65 +83,65 @@ const handleLike=(id)=>{
 
  
   return (
-    <Box>
-        <Box className={styles.main_container}>
-            <Box className={styles.myfeed}>
-                <Box className={styles.myfeed_menu}>
+    <div>
+        <div className={styles.main_container}>
+            <div className={styles.myfeed}>
+                <div className={styles.myfeed_menu}>
                     <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1628498908811.jpg" alt="first"/>
-                    <Text>My feed</Text>
-                </Box>
-                <Box className={styles.myfeed_menu}>
+                    <p>My feed</p>
+                </div>
+                <div className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/tshirts.png" alt="second"/>
-                    <Text>T-Shirts</Text>
-                </Box>
-                <Box className={styles.myfeed_menu}>
+                    <p>T-Shirts</p>
+                </div>
+                <div className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/shirts.png" alt="third"/>
-                    <Text>Shirts</Text>
-                </Box>
-                <Box className={styles.myfeed_menu}>
+                    <p>Shirts</p>
+                </div>
+                <div className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/jeans.png" alt="four"/>
-                    <Text>jeans</Text>
-                </Box>
-                <Box className={styles.myfeed_menu}>
+                    <p>jeans</p>
+                </div>
+                <div className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/trousers.png" alt="five"/>
-                    <Text>trousers</Text>
-                </Box>
-                <Box className={styles.myfeed_menu}>
+                    <p>trousers</p>
+                </div>
+                <div className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/ethnicsets.png" alt="six"/>
-                    <Text>ethnic sets</Text>
-                </Box>
-                <Box className={styles.myfeed_menu}>
+                    <p>ethnic sets</p>
+                </div>
+                <div className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/footwear.png" alt="seven"/>
-                    <Text>footwear</Text>
-                </Box>
-                <Box className={styles.myfeed_menu}>
+                    <p>footwear</p>
+                </div>
+                <div className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/kids.png" alt="eight"/>
-                    <Text>kids</Text>
-                </Box>
-                <Box className={styles.myfeed_menu}>
+                    <p>kids</p>
+                </div>
+                <div className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/women/home.png" alt="nine"/>
-                    <Text>home</Text>
-                </Box>
-                 <Box className={styles.myfeed_menu}>
+                    <p>home</p>
+                </div>
+                 <div className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/accessory.png" alt="ten"/>
-                    <Text>accessory</Text>
-                </Box>
-                <Box className={styles.myfeed_menu}>
+                    <p>accessory</p>
+                </div>
+                <div className={styles.myfeed_menu}>
                     <img src="https://img0.junaroad.com/images/icons/men/winter.png" alt="eleven"/>
-                    <Text>winter</Text>
-                </Box>
-            </Box>
-            <Box className={styles.first_box}>
-                <Box>
+                    <p>winter</p>
+                </div>
+            </div>
+            <div className={styles.first_box}>
+                <div>
                    <img src="https://img0.junaroad.com/images/icons/130440_discount.gif" alt="pay-gif"/> 
-                   <Box>
+                   <div>
                     <h5>Pay Online & Get Flat 10% Off</h5>
-                    <Text>Paytm, Gpay, PhonePe, Net Banking, Debit & Credit Cards</Text>
-                   </Box>
-                </Box>
-                <Box>
+                    <p>Paytm, Gpay, PhonePe, Net Banking, Debit & Credit Cards</p>
+                   </div>
+                </div>
+                <div>
                 <Carousel responsive={responsive} style={{ display: "flex" }}>
-              <Box>
+              <div>
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1679910119705.jpg?crsl_pos=0"
                   style={{
@@ -150,8 +152,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                
-              </Box>
-              <Box>
+              </div>
+              <div>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1676008328934.jpg?crsl_pos=0"
@@ -163,8 +165,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                 
-              </Box>
-              <Box>
+              </div>
+              <div>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1667988209100.jpg?crsl_pos=0"
@@ -176,8 +178,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                 
-              </Box>
-              <Box>
+              </div>
+              <div>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1658918101342.jpg?crsl_pos=0    "
@@ -189,8 +191,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                
-              </Box>
-              <Box>
+              </div>
+              <div>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1674029296684.jpg?crsl_pos=0"
@@ -202,8 +204,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
               
-              </Box>
-              <Box>
+              </div>
+              <div>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1674029296684.jpg?crsl_pos=0"
@@ -215,8 +217,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                
-              </Box>
-              <Box>
+              </div>
+              <div>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1677239926933.jpg?crsl_pos=0"
@@ -228,8 +230,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                 
-              </Box>
-              <Box>
+              </div>
+              <div>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1651469168362.jpg?crsl_pos=0"
@@ -241,8 +243,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
               
-              </Box>
-              <Box>
+              </div>
+              <div>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1676438894037.jpg?crsl_pos=0"
@@ -254,8 +256,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                 
-              </Box>
-              <Box>
+              </div>
+              <div>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1678466728484.jpg?crsl_pos=0"
@@ -267,8 +269,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                 
-              </Box>
-              <Box>
+              </div>
+              <div>
                 {" "}
                 <img
                   src="https://img0.junaroad.com/images/banners/B2G1_13january2023_1673587401792.jpg?crsl_pos=0"
@@ -280,8 +282,8 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                
-              </Box>
-              <Box>
+              </div>
+              <div>
                 {" "}
                 <img
                   src="https://img1.junaroad.com//assets/images/mobileNotif/img-1657276563582.jpg?page_id=2391766&crsl_pos=1"
@@ -293,11 +295,11 @@ const handleLike=(id)=>{
                   alt="Avatar-1"
                 />
                
-              </Box>
+              </div>
             </Carousel>
 
-                </Box>
-                <Box className={styles.card_container}>
+                </div>
+                <div className={styles.card_container}>
                    {images.length>0 && images.map((el,index)=>{
 
                     return <Link><div key={index} className={styles.cards}>
@@ -315,12 +317,12 @@ const handleLike=(id)=>{
                     </div></Link>
                    })} 
 
-                </Box>
+                </div>
                 
-            </Box>
+            </div>
 
-        </Box>
-    </Box>
+        </div>
+    </div>
   )
 }
 

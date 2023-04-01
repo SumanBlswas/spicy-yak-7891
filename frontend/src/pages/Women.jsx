@@ -296,9 +296,9 @@ const handleLike=(id)=>{
                 <div className={styles.card_container}>
                    {images.length>0 && images.map((el,index)=>{
 
-                    return <Link><div key={index} className={styles.cards}>
+                    return <div key={index} className={styles.cards}>
                         <p id={styles.card_title}>{el.title}</p>
-                        <img src={el.img1} alt={el.title}/>
+                        <Link to="#"><img src={el.img1} alt={el.title}/></Link>
                         <div className={styles.heart}>
                            <button className={styles.like} onClick={()=>handleLike(el.id)}>
                             <AiOutlineHeart  className={flag && num===el.id ? styles.like_icon: styles.no_like}/>
@@ -308,7 +308,7 @@ const handleLike=(id)=>{
                             <img src={el.img2} alt={el.title2}/>
                             <p>{el.title2}</p>
                         </div>
-                    </div></Link>
+                    </div>
                    })} 
 
                 </div>
