@@ -15,7 +15,7 @@ const inisitalState = {
     isLoadingAdminAdd: false,
     isErrorAdminAdd: false,
 }
-
+ 
 const reducer = (state = inisitalState, { type, payload }) => {
     switch (type) {
       case GET_PRODUCT_REQUEST:
