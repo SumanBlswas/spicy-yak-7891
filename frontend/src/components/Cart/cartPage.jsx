@@ -1,23 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
+  Center,
   Flex,
   Grid,
   GridItem,
   Heading,
+  Stack,
   Text,
+  useToast,
 } from "@chakra-ui/react";
 import Navbar from "../Navbar/Navbar";
 import {useSelector} from "react-redux";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { Footer } from "../footer/Footer";
 
 const CartPage = () => {
-  const nxt = useSelector((store) => console.log(store.cartReducer.cart))
+  const products = useSelector((store) => console.log(store.cart.cart))
+  const [data,setData] = useState([]);
+  // console.log(products);
+  const navigate = useNavigate();
+  const toast = useToast();
+
+  const getCartData = async () => {
+    try{
+      let res = await axios.get('https://maroon-sea-urchin-tam.cyclic.app/cart',{
+        headers: {
+          Authorization: localStorage.getItem('token'),
+        }
+      })
+      console.log(res);
+      setData(res.data);
+    }catch(err){
+      console.log(err);
+      console.log('Cannot get the Data')
+    }
+  }
+  useEffect(()=>{
+    getCartData();
+  },[])
+
   let value = "00";
   let tax = 200;
+  
   return (
     <Box>
-      <Navbar/>
       <Grid
         templateColumns="repeat(5, 1fr)"
         gap={4}
@@ -28,6 +57,7 @@ const CartPage = () => {
       >
         <GridItem colSpan={3} h="auto" bg="tomato">
           <Heading color="green">Cart Item</Heading>
+          
         </GridItem>
         <GridItem
           colSpan={2}
@@ -70,6 +100,7 @@ const CartPage = () => {
           </Button>
         </GridItem>
       </Grid>
+      <Footer/>
     </Box>
   );
 };

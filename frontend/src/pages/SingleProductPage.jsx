@@ -1,6 +1,5 @@
 import React, { useEffect, useState} from 'react';
 import { useNavigate } from "react-router-dom";
-
 import {
     Box,
     Container,
@@ -32,8 +31,7 @@ import axios from 'axios';
     axios(`https://puce-busy-zebra.cyclic.app/MensData/${id}`)
     .then((res)=>{
       console.log(res)
-        setData(res.data)
-        
+        setData(res.data) 
     })
 },[id])
 
@@ -51,7 +49,21 @@ import axios from 'axios';
     } = data
 
     let Mrp = +mrp
-    let Save = ((Mrp * save)/100).toFixed(0)
+    let Save = ((Mrp * save)/100).toFixed(0);
+
+    const handleClick = async () => {
+      try{
+        let res = await axios.post("https://maroon-sea-urchin-tam.cyclic.app/cart/add",data,{
+          headers: {
+            Authorization: localStorage.getItem('token'),
+          }
+        })
+        console.log(res);
+
+      }catch(err){
+        console.log(err);
+      }
+    }
 return (
   <Container maxW={'7xl'}>
     <SimpleGrid
@@ -204,8 +216,7 @@ return (
             transform: 'translateY(2px)',
             bg: "#003380",
             boxShadow: 'lg',
-          }}
-          >
+          }}>
           Add to cart
         </Button>
 

@@ -5,20 +5,23 @@ import Login from "../pages/login";
 import CartPage from "../components/Cart/cartPage";
 import Product from "../pages/Product";
 import Payment from "../components/Checkout/Payment";
-import Admin from "../pages/Admin";
-import SignUp from "../pages/SignUp";
+
+import Singleproductpage from "../pages/SingleProductPage";
+import Navbar from "../components/Navbar/Navbar";
 
 const AllRoutes = () => {
   return (
-    <Routes>
-      <Route path={"/"} element={<Home />} />
-      <Route path={"/cart"} element={<CartPage />} />
-      <Route path={"/login"} element={<Login />} />
-      <Route path={"/product"} element={<Product />} />
-      <Route path={"/payment"} element={<Payment />} />
-      <Route path={"/admin"} element={<Admin />} />
-      <Route path={"/signup"} element={<SignUp />} />
-    </Routes>
+    <>
+      <Navbar/>
+      <Routes>       
+        <Route path={"/"} element={<Home />} />        
+        <Route path={"/cart"} element={<CartPage />} />
+        <Route path={"/login"} element={<Login />} />
+        <Route path={"/product"} element={<Product />} />
+        <Route path={"/payment"} element={<Payment />} />
+        <Route path={"/product/:id"} element={<Singleproductpage />} />
+      </Routes>
+    </>
   );
 };
 
