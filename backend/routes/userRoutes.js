@@ -125,10 +125,21 @@ userRouter.get("/account", async (req, res) => {
 
 userRouter.patch("/account_update", async (req, res) => {
   const { userID } = req.body;
-  const payload = req.body;
+  const { name, email, password, age, gender } = req.body;
   try {
-    let user = await userModel.find({ _id: userID }, payload);
-    res.status(200).send(user);
+    bcrypt.hash(password, 5, async (err, hash) => {
+      let user = await userModel.findByIdAndUpdate(
+        { _id: userID },
+        {
+          name,
+          email,
+          password: hash,
+          age,
+          gender,
+        }
+      );
+      res.status(200).send(user);
+    });
   } catch (error) {
     res.status(404).send({ msg: error.meassage });
   }
