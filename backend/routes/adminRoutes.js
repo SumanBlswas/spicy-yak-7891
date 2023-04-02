@@ -1,4 +1,5 @@
 import express from "express";
+import bcrypt from "bcrypt";
 import { adminModel } from "../models/adminModel.js";
 
 const adminRouter = express.Router();
@@ -13,22 +14,22 @@ adminRouter.get("/", async (req, res) => {
 });
 
 adminRouter.post("/add", async (req, res) => {
-  const { name, email, password, age, gender, position } = req.body;
+  const { name, email, password, age, gender, position, img } = req.body;
   try {
-    bcrypt.hash(password, 5, async (err, hash) => {
-      let admin = new adminModel({
-        name,
-        email,
-        password: hash,
-        age,
-        gender,
-        position,
-      });
-      await admin.save();
-      res.status(200).send({ msg: "New admin has been added" });
+    const hash = await bcrypt.hash(password, 5);
+    let admin = new adminModel({
+      name,
+      email,
+      password: hash,
+      age,
+      gender,
+      position,
+      img,
     });
+    await admin.save();
+    res.status(200).send({ msg: "New admin has been added" });
   } catch (error) {
-    res.status(404).send({ msg: error.meassage });
+    res.status(404).send({ msg: error.message });
   }
 });
 
@@ -61,7 +62,7 @@ adminRouter.post("/login", async (req, res) => {
   }
 });
 
-adminRouter.get("/updates/:adminID", async (req, res) => {
+adminRouter.patch("/updates/:adminID", async (req, res) => {
   let payload = req.body;
   let { adminID } = req.params;
   try {
@@ -72,7 +73,7 @@ adminRouter.get("/updates/:adminID", async (req, res) => {
   }
 });
 
-adminRouter.get("/delete/:adminID", async (req, res) => {
+adminRouter.delete("/delete/:adminID", async (req, res) => {
   let { adminID } = req.params;
   try {
     await adminModel.findByIdAndDelete({ _id: adminID });
