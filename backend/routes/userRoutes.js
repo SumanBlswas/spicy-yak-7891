@@ -145,4 +145,14 @@ userRouter.patch("/account_update", async (req, res) => {
   }
 });
 
+userRouter.delete("/account_delete", async (req, res) => {
+  const { userID } = req.body;
+  try {
+    await userModel.findByIdAndDelete({ _id: userID });
+    res.status(200).send({ msg: `User ${userID} has been deleted` });
+  } catch (error) {
+    res.status(404).send({ msg: error.meassage });
+  }
+});
+
 export { userRouter };
