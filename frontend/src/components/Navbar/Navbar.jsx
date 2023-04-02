@@ -6,11 +6,25 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaUser } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "./logo.jpg";
-import { Link } from "react-router-dom";
-import { Box, Text } from "@chakra-ui/react";
+import { Link, useNavigate } from "react-router-dom";
+import { Box, Text, Toast, useToast } from "@chakra-ui/react";
 
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
+  const toast = useToast();
+  const navigate = useNavigate();
+
+  const logout = () => {
+    localStorage.clear();
+      toast({
+        title: "Logout",
+        description: `Logout Successful`,
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      })
+      navigate("/")
+  }
 
   return (
     <Box pb="28" position={"fixed"} zIndex={"999"}>
@@ -240,7 +254,7 @@ const Navbar = () => {
                 <h3>Welcome</h3>
 
                 <a href="/login">Login</a>
-                <button>Logout</button>
+                <button onClick={logout}>Logout</button>
                 <a href="/admin">Admin</a>
 
                

@@ -14,12 +14,13 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const toast = useToast();
+  const navigate = useNavigate()
 
   let handleSubmit = async () => {
     let payload = {
@@ -36,6 +37,7 @@ export default function Login() {
         axios.defaults.headers.common[
           "Authorization"
         ] = `${sendData.data.token}`;
+        navigate("/");
         toast({
           title: "logged in Successfully.",
           description: `You have successfully loggedIn`,
@@ -56,6 +58,7 @@ export default function Login() {
   };
   return (
     <Flex
+      pt="10"
       minH={"100vh"}
       align={"center"}
       justify={"center"}
