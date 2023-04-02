@@ -45,9 +45,6 @@ export default function Login() {
           isClosable: true,
         });
         navigate(`/account`);
-        setTimeout(() => {
-          window.location.reload();
-        }, 3000);
       }
     } catch (error) {
       toast({
