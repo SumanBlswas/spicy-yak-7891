@@ -26,7 +26,8 @@ import { useCallback } from "react";
 
 import SampleBrand from "./SampleBrands";
 
-import  Navbar  from "../components/Navbar/Navbar";
+import Navbar from "../components/Navbar/Navbar";
+import { Footer } from "../components/footer/Footer";
 
 let brands = [
   "HRX by Hrithik Roshan",
@@ -133,20 +134,18 @@ const Product = () => {
         <Loading />
       </>
     );
-  if (error)
-    return (
-      <>
-        {/* <PageNotFound /> */}
-      </>
-    );
+  if (error) return <>{/* <PageNotFound /> */}</>;
 
   return (
     <div>
-      <Navbar />
-      {/* <Final /> */}
+      <div className={styles.product_nav}>
+        <Navbar />
+      </div>
+
       <Box
         className={styles.product_container}
-        mt={{ base: "5rem", sm: "5rem", md: "3.9rem", lg: "7.2rem" }}
+        mt={{ base: "5rem", sm: "5rem", md: "3.9rem", lg: "11.2rem" }}
+        // mt={"170px"}
       >
         <Flex
           position={"relative"}
@@ -271,9 +270,8 @@ const Product = () => {
                   justifyContent={"center"}
                   border={"0px solid gray"}
                   boxShadow={"sm"}
-                  
                 >
-                  <Box width={"100%"} border={"0px solid red"} >
+                  <Box width={"100%"} border={"0px solid red"}>
                     <Text ml={2} textAlign={"left"}>
                       <b>Sort By :</b>
                     </Text>
@@ -382,7 +380,6 @@ const Product = () => {
 
         {/* </div> */}
       </Box>
-      {/* <Footer/> */}
     </div>
   );
 };
