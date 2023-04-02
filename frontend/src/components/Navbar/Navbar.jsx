@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Navbar.module.css";
 import { HiPencil } from "react-icons/hi";
 import { BiSearchAlt2 } from "react-icons/bi";
@@ -7,24 +7,46 @@ import { FaUser } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "./logo.jpg";
 import { Link, useNavigate } from "react-router-dom";
-import { Box, Text, Toast, useToast } from "@chakra-ui/react";
+import { Box, Flex, Text, useToast } from "@chakra-ui/react";
+import axios from "axios";
 
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
+  const [data, setData] = React.useState([]);
   const toast = useToast();
   const navigate = useNavigate();
 
+  const get = async () => {
+    try {
+      let data1 = await axios.get(
+        "https://maroon-sea-urchin-tam.cyclic.app/users/account",
+        {
+          headers: {
+            Authorization: localStorage.getItem("token"),
+          },
+        }
+      );
+      setData(data1.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    get();
+  }, [data]);
+
   const logout = () => {
     localStorage.clear();
-      toast({
-        title: "Logout",
-        description: `Logout Successful`,
-        status: "success",
-        duration: 9000,
-        isClosable: true,
-      })
-      navigate("/")
-  }
+    toast({
+      title: "Logout",
+      description: `Logout Successful`,
+      status: "success",
+      duration: 9000,
+      isClosable: true,
+    });
+    navigate("/");
+  };
 
   return (
     <Box pb="28" position={"fixed"} zIndex={"999"}>
@@ -223,21 +245,44 @@ const Navbar = () => {
         <Box className={styles.second_box}>
           <ul className={styles.second_ul_links}>
             <li>
-              <a href="*" style={{display:'flex',flexDirection:"column",placeItems:"center"}}>
+              <a
+                href="*"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  placeItems: "center",
+                }}
+              >
                 <HiPencil className={styles.icon} />
                 <br />
                 Scrapbook
               </a>
             </li>
             <li>
-              <a href="*" style={{display:'flex',flexDirection:"column",placeItems:"center"}}>
+              <a
+                href="*"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  placeItems: "center",
+                }}
+              >
                 <BiSearchAlt2 className={styles.icon} />
                 <br />
                 Search
               </a>
             </li>
             <li>
-              <Link as={'a'} to="/cart" id={styles.cart_icon} style={{display:'flex',flexDirection:"column",placeItems:"center"}}>
+              <Link
+                as={"a"}
+                to="/cart"
+                id={styles.cart_icon}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  placeItems: "center",
+                }}
+              >
                 <AiOutlineShoppingCart className={styles.icon} />
                 <span id={styles.count}>0</span>
                 <br />
@@ -245,20 +290,30 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <a href="*" style={{display:'flex',flexDirection:"column",placeItems:"center"}}>
+              <a
+                href="*"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  placeItems: "center",
+                }}
+              >
                 <FaUser className={styles.icon} />
                 <br />
                 profile
               </a>
               <Box className={styles.profile_menu}>
                 <h3>Welcome</h3>
-
-                <a href="/login">Login</a>
+                {data.length > 0 ? (
+                  <Flex direction={"column"} justify={"space-around"} gap={5}>
+                    <Text>{data[0].name}</Text>
+                    <a href="/account">Account</a>
+                  </Flex>
+                ) : (
+                  <a href="/login">Login</a>
+                )}
                 <button onClick={logout}>Logout</button>
                 <a href="/admin">Admin</a>
-
-               
-
               </Box>
             </li>
           </ul>

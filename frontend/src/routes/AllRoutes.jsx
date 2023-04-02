@@ -9,19 +9,84 @@ import Payment from "../components/Checkout/Payment";
 
 import Singleproductpage from "../pages/SingleProductPage";
 import Navbar from "../components/Navbar/Navbar";
+import Account from "../components/Account/Account";
 
 const AllRoutes = () => {
   return (
     <>
-      <Navbar/>
-      <Routes>       
-        <Route path={"/"} element={<Home />} />        
-        <Route path={"/cart"} element={<CartPage />} />
-        <Route path={"/login"} element={<Login />} />
-        <Route path={"/product"} element={<Product />} />
-        <Route path={"/payment"} element={<Payment />} />
-        <Route path={"/signup"} element={<SignUp />} />
-        <Route path={"/product/:id"} element={<Singleproductpage />} />
+      <Routes>
+        <Route
+          path={"/"}
+          element={
+            <>
+              <Navbar />
+              <Home />
+            </>
+          }
+        />
+        <Route
+          path={"/cart"}
+          element={
+            <>
+              <Navbar />
+              <CartPage />
+            </>
+          }
+        />
+        <Route
+          path={"/login"}
+          element={
+            <>
+              <Navbar />
+              <Login />
+            </>
+          }
+        />
+        <Route
+          path={"/product"}
+          element={
+            <>
+              <Navbar />
+              <Product />
+            </>
+          }
+        />
+        <Route
+          path={"/payment"}
+          element={
+            <>
+              <Navbar />
+              <Payment />
+            </>
+          }
+        />
+        <Route
+          path={"/signup"}
+          element={
+            <>
+              <Navbar />
+              <SignUp />
+            </>
+          }
+        />
+        <Route
+          path={"/product/:id"}
+          element={
+            <>
+              <Navbar />
+              <Singleproductpage />
+            </>
+          }
+        />
+        <Route
+          path={"/account"}
+          element={
+            <>
+              <Navbar />
+              <Account />
+            </>
+          }
+        />
       </Routes>
     </>
   );
