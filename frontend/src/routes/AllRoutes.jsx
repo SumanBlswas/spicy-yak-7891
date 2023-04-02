@@ -7,9 +7,6 @@ import Product from "../pages/Product";
 import Payment from "../components/Checkout/Payment";
 import Singleproductpage from "../pages/SingleProductPage";
 import Navbar from "../components/Navbar/Navbar";
-import { Footer } from "../components/footer/Footer";
-
-
 
 const AllRoutes = () => {
   return (
