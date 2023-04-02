@@ -5,6 +5,7 @@ import Login from "../pages/login";
 import CartPage from "../components/Cart/cartPage";
 import Product from "../pages/Product";
 import Payment from "../components/Checkout/Payment";
+
 import Singleproductpage from "../pages/SingleProductPage";
 import Navbar from "../components/Navbar/Navbar";
 
