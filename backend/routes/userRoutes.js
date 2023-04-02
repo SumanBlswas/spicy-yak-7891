@@ -123,4 +123,15 @@ userRouter.get("/account", async (req, res) => {
   }
 });
 
+userRouter.patch("/account/update", async (req, res) => {
+  const { userID } = req.body;
+  const payload = req.body;
+  try {
+    let user = await userModel.find({ _id: userID }, payload);
+    res.status(200).send(user);
+  } catch (error) {
+    res.status(404).send({ msg: error.meassage });
+  }
+});
+
 export { userRouter };
