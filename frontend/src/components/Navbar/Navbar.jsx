@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect} from "react";
 import styles from "./Navbar.module.css";
 import { HiPencil } from "react-icons/hi";
 import { BiSearchAlt2 } from "react-icons/bi";
@@ -60,7 +60,7 @@ const Navbar = () => {
           <Box className={show ? styles.nav_menu_links : styles.nav_links}>
             <ul className={styles.ul_links}>
               <li>
-                <a href="*">Women</a>
+                <Link to="/">Women</Link>
                 <Box className={styles.women_menu}>
                   <Box id={styles.ethnic_wear}>
                     <button>Ethnic Wear</button>
@@ -122,7 +122,7 @@ const Navbar = () => {
                 </Box>
               </li>
               <li>
-                <a href="*">Men</a>
+                <Link to="/">Men</Link>
                 <Box className={styles.women_menu}>
                   <Box id={styles.ethnic_wear}>
                     <button>Top Wear</button>
@@ -182,7 +182,7 @@ const Navbar = () => {
                 </Box>
               </li>
               <li>
-                <a href="*">Kids</a>
+                <Link to="/">Kids</Link>
                 <Box className={styles.women_menu}>
                   <Box id={styles.ethnic_wear}>
                     <button>Boys</button>
@@ -234,7 +234,7 @@ const Navbar = () => {
                 </Box>
               </li>
               <li>
-                <a href="*">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
                 <a href="*">offers</a>
