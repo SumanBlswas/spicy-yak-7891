@@ -5,8 +5,7 @@ import Admin from "../pages/Admin";
 const AdminRoutes = () => {
   return (
     <>
-      <Routes>       
-        
+      <Routes>
         <Route path={"/admin"} element={<Admin />} />        
       </Routes>
     </>
