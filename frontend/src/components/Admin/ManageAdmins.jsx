@@ -11,7 +11,7 @@ const ManageAdmins = () => {
 
   const handleDelete =(admin) => {
     try {
-      dispatch(deleteAdmin(admin.id));
+      dispatch(deleteAdmin(admin._id));
       toast({
         title: 'Admin Deleted',
         description: `${admin.name} has been deleted successfully`,

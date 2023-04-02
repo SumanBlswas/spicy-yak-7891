@@ -1,14 +1,15 @@
 .nav{   
-    position:relative;
+    /* position:relative; */
 }
-.home_container{
-    border:0px solid black;
+ .home_container{
+    border:2px solid black;
     height:30px;
     width:150px;
-    top:90px;
-    left:180px;
-    position:absolute;
-}
+    margin-left:200pxx;
+    /* top:90px;
+    left:180px; */
+    /* position:absolute; */
+} 
 
 
 .men_women>button{
@@ -19,11 +20,14 @@
 
 .Footer_Section{
     border:0px solid black;
-    margin-top:4150px;
+    margin-top:4250px;
 }
 .FooterWomen{
     margin-top:3000px;
 }
+/* .footer_section{
+    border:2px solid black;
+} */
 
 @media (max-width:1000px){
    footer{
