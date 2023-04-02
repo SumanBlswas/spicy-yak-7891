@@ -73,7 +73,7 @@ userRouter.patch("/update/:userID", async (req, res) => {
     await userModel.findById({ _id: userID }, payload);
     res.status(404).send({ msg: `User ${userID} has been updated` });
   } catch (error) {
-    res.status(404).send({ msg: error.meassage });
+    res.status(404).send({ msg: error.message });
   }
 });
 
@@ -83,7 +83,7 @@ userRouter.delete("/delete/:userID", async (req, res) => {
     await userModel.findByIdAndDelete({ _id: userID });
     res.status(200).send({ msg: `User ${userID} has been deleted` });
   } catch (error) {
-    res.status(404).send({ msg: error.meassage });
+    res.status(404).send({ eemsg: error.message });
   }
 });
 
