@@ -3,6 +3,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { validator } from "../middlewares/validator.js";
 import { userModel } from "../models/userModel.js";
+import { checkMe } from "../middlewares/checkMe.js";
 
 const userRouter = express.Router();
 
@@ -104,6 +105,18 @@ userRouter.get("/query", async (req, res) => {
       filter.gender = { $regex: gender };
     }
     let user = await userModel.find(filter);
+    res.status(200).send(user);
+  } catch (error) {
+    res.status(404).send({ msg: error.meassage });
+  }
+});
+
+userRouter.use(checkMe);
+
+userRouter.get("/account", async (req, res) => {
+  const { userID } = req.body;
+  try {
+    let user = await userModel.find({ _id: userID });
     res.status(200).send(user);
   } catch (error) {
     res.status(404).send({ msg: error.meassage });
