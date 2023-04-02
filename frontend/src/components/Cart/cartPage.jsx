@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
@@ -7,30 +6,34 @@ import {
   GridItem,
   Heading,
   Text,
-  useToast,
+  // useToast,
 } from "@chakra-ui/react";
-import {shallowEqual, useSelector} from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { shallowEqual, useSelector } from "react-redux";
+// import { useNavigate } from "react-router-dom";
 import { Footer } from "../footer/Footer";
-import { cartAPI } from "../../redux/CartRedux/cart.api"; 
 import { useDispatch } from "react-redux";
+import { getCartApi } from "../../redux/CartRedux/cart.action";
+import { useEffect } from "react";
+// import { delCartApi } from "../../Redux/Cart/cart.action";
 
 const CartPage = () => {
-  const cart = useSelector((store) =>  store.cartReducer.cart)
-  const [data,setData] = useState([]);
-  const navigate = useNavigate();
-  const toast = useToast();
+  const { cart } = useSelector((store) => {
+    return {
+      cart: store.CartReducer.cart,
+      isLoading: store.CartReducer.isLoading,
+    };
+  }, shallowEqual);
 
-  const dispatch = useDispatch()
-  useEffect(()=>{
-    dispatch(cartAPI());
-  },[dispatch])
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(getCartApi());
+  }, [dispatch]);
   console.log(cart);
 
   let value = "00";
   let tax = 200;
-  
+
   return (
     <Box>
       <Grid
@@ -43,12 +46,11 @@ const CartPage = () => {
       >
         <GridItem colSpan={3} h="auto" bg="tomato">
           <Heading color="green">Cart Item</Heading>
-          
         </GridItem>
         <GridItem
           colSpan={2}
           h="auto"
-          boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px;'}
+          boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px;"}
           borderRadius={8}
           fontSize={["xs", "sm", "sm", "md", "md", "lg"]}
         >
@@ -81,12 +83,12 @@ const CartPage = () => {
             </Text>
             <Text as="b" color="green.500">{`₹${tax}`}</Text>
           </Flex>
-          <Button colorScheme="red" m="4" pl='10' pr='10' pt='3' pb='3'>
+          <Button colorScheme="red" m="4" pl="10" pr="10" pt="3" pb="3">
             BUY NOW
           </Button>
         </GridItem>
       </Grid>
-      <Footer/>
+      <Footer />
     </Box>
   );
 };

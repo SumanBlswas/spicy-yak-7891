@@ -1,37 +1,59 @@
+import axios from "axios";
 
-import { cartAPI, cartdeleteAPI } from './cart.api'
-import * as types from './cart.types';
+import {
+  CART_API_CALL_FAIL,
+  CART_API_CALL_REQ,
+  CART_API_CALL_SUC,
+} from "./cart.types";
 
-const getCartApiREQ = () => {
-    return {type:types.CART_API_REQ}
-}
-const getCartApiSUC = (payload) => {
-    return {type:types.CART_API_SUC,payload}
-}
-const getCartApiERR = () => {
-    return {type:types.CART_API_ERR}
-}
+const getCartApiReq = () => {
+  return {
+    type: CART_API_CALL_REQ,
+  };
+};
 
-export const getCart = () =>async (dispatch)=>{
-    dispatch(getCartApiREQ())
-    try{
-        let res = await cartAPI()
-        console.log(res);
-        dispatch(getCartApiSUC(res.data));
-    }catch(err){
-        dispatch(getCartApiERR())
-    }
-}
+const getCartApiSuc = (payload) => {
+  return {
+    type: CART_API_CALL_SUC,
+    payload,
+  };
+};
 
+const getCartApiFail = () => {
+  return {
+    type: CART_API_CALL_FAIL,
+  };
+};
 
-export const deleteCart = (id) =>async (dispatch)=>{
-    try{
-        await cartdeleteAPI(id)
-        dispatch(cartAPI());
-    }catch(err){
-        console.log(err)
-    }
+export const getCartApi = () => async (dispatch) => {
+  dispatch(getCartApiReq());
+  try {
+    const response = await axios.get(
+      "https://maroon-sea-urchin-tam.cyclic.app/cart",
+      {
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      }
+    );
+    dispatch(getCartApiSuc(response.data));
+  } catch (error) {
+    dispatch(getCartApiFail());
+  }
+};
 
-}
-
-
+export const delCartApi = (id) => async (dispatch) => {
+  try {
+    await axios.delete(
+      `https://maroon-sea-urchin-tam.cyclic.app/cart/delete/${id}`,
+      {
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      }
+    );
+    dispatch(getCartApi());
+  } catch (error) {
+    console.log(error);
+  }
+};

@@ -1,3 +1,5 @@
-export const CART_API_REQ = "cart/req"
-export const CART_API_SUC = "cart/suc"
-export const CART_API_ERR = "cart/err"
+const CART_API_CALL_REQ = "cart/req";
+const CART_API_CALL_SUC = "cart/suc";
+const CART_API_CALL_FAIL = "cart/fail";
+
+export { CART_API_CALL_FAIL, CART_API_CALL_REQ, CART_API_CALL_SUC };
