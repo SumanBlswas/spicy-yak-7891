@@ -65,15 +65,16 @@ import axios from 'axios';
       }
     }
 return (
-  <Container maxW={'7xl'}>
+  <Container    maxW={'7xl'}>
     <SimpleGrid
+  
       columns={{ base: 1, lg: 2 }}
       spacing={{ base: 8, md: 10 }}
       py={{ base: 18, md: 24 }}>
       <Flex>
         <Image
           rounded={'md'}
-
+          mt ={{ base: "none", sm: '10px', lg: '20px' }}
           alt={'product image'}
           src={
            images
@@ -82,10 +83,10 @@ return (
           fit={'fit'}
           align={'center'}
           w={'100%'}
-          h={{ base: '100%', sm: '400px', lg: '500px' }}
+          h={{ base: '100%', sm: '500px', lg: '600px' }}
         />
       </Flex>
-      <Stack spacing={{ base: 6, md: 10 }}>
+      <Stack mt ={{ base: "none", sm: '10px', lg: '20px' }} spacing={{ base: 6, md: 10 }}>
         <Box as={'header'}>
           <Heading
             lineHeight={1.1}
@@ -123,42 +124,42 @@ return (
         </Box>
 
         <Stack
-          spacing={{ base: 4, sm: 6 }}
+          spacing={{ base: 3, sm: 5 }}
           direction={'column'}
           divider={
             <StackDivider
               borderColor={useColorModeValue('gray.200', 'gray.600')}
             />
           }>
-          <VStack spacing={{ base: 4, sm: 6 }}>
+          <VStack spacing={{ base: 2, sm: 3 }}>
             <Text
             //   color={}
               fontSize={'2xl'}
               fontWeight={'300'}>
               {title || "Redmi 10A 32 GB, 3 GB RAM, Charcoal Black, Mobile Phone(492850145)" }
             </Text>
-            <Text fontSize={'lg'} textAlign={'left'}  color={useColorModeValue('gray.500', 'gray.400')} >
+            {/* <Text fontSize={'lg'} textAlign={'left'}  color={useColorModeValue('gray.500', 'gray.400')} >
             <b>Warranty</b>: 3 Months manufacturer warranty
-            </Text>
+            </Text> */}
           </VStack>
-          <Box>
-            <Text
+          {/* <Box>
+            {/* <Text
               fontSize={{ base: '16px', lg: '18px' }}
               color={useColorModeValue('#003380', 'yellow.300')}
               fontWeight={'500'}
               textTransform={'uppercase'}
               mb={'4'}>
               Features
-            </Text>
+            </Text> */}
 
-            <SimpleGrid >
+            {/* <SimpleGrid >
               <List spacing={2}>
                 <ListItem >STRECHABLE</ListItem>
                
               </List>
              
-            </SimpleGrid>
-          </Box>
+            </SimpleGrid> */}
+          {/* </Box> */} 
           <Box>
             <Text
               fontSize={{ base: '16px', lg: '18px' }}
@@ -182,20 +183,20 @@ return (
                 </Text>{' '}
                 {category}
               </ListItem>
-              <ListItem>
+              {/* <ListItem>
                 <Text as={'span'} fontWeight={'bold'}>
                   Emi:
                 </Text>{' '}
           
                 ₹{(discounted_price/12).toFixed(2)}/month
-              </ListItem>
+              </ListItem> */}
             
-              <ListItem>
+              {/* <ListItem>
                 <Text as={'span'} fontWeight={'bold'}>
                   Available color:
                 </Text>{' '}
                 Black
-              </ListItem>
+              </ListItem> */}
               
             </List>
           </Box>
@@ -205,7 +206,7 @@ return (
         <Button
           rounded={'none'}
           w={'full'}
-          mt={8}
+          mt={6}
           size={'lg'}
           py={'7'}
           onClick={()=>navigate(`/cart/${id}`)}
@@ -220,10 +221,10 @@ return (
           Add to cart
         </Button>
 
-        <Stack direction="row" alignItems="center" justifyContent={'center'}>
+        {/* <Stack direction="row" alignItems="center" justifyContent={'center'}>
           <MdLocalShipping />
           <Text>2-3 business days delivery</Text>
-        </Stack>
+        </Stack> */}
       </Stack>
     </SimpleGrid>
   </Container>
