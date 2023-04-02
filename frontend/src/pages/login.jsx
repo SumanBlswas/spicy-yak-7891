@@ -37,7 +37,6 @@ export default function Login() {
         axios.defaults.headers.common[
           "Authorization"
         ] = `${sendData.data.token}`;
-        navigate(`/account`);
         toast({
           title: "logged in Successfully.",
           description: `You have successfully loggedIn`,
@@ -45,6 +44,10 @@ export default function Login() {
           duration: 9000,
           isClosable: true,
         });
+        navigate(`/account`);
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
       }
     } catch (error) {
       toast({
