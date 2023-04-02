@@ -20,7 +20,7 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const toast = useToast();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   let handleSubmit = async () => {
     let payload = {
@@ -37,7 +37,7 @@ export default function Login() {
         axios.defaults.headers.common[
           "Authorization"
         ] = `${sendData.data.token}`;
-        navigate("/");
+        navigate(`/account`);
         toast({
           title: "logged in Successfully.",
           description: `You have successfully loggedIn`,
@@ -116,7 +116,14 @@ export default function Login() {
             </Stack>
             <Text fontSize={"lg"} color={"gray.600"}>
               Don't have an account?{" "}
-              <Link style={{color:"#99cc33", fontSize: "17px", textDecorationLine : "underline"}}  to="/signup">
+              <Link
+                style={{
+                  color: "#99cc33",
+                  fontSize: "17px",
+                  textDecorationLine: "underline",
+                }}
+                to="/signup"
+              >
                 Sign up
               </Link>
             </Text>

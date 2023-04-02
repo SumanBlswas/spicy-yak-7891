@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Avatar,
   Box,
@@ -19,23 +19,18 @@ import {
   useDisclosure,
   useToast,
 } from "@chakra-ui/react";
+import axios from "axios";
 
 const Account = () => {
-  const nameRef = useRef("John Doe");
-  const emailRef = useRef("johndoe@example.com");
-  const passwordRef = useRef("");
-  const confirmPasswordRef = useRef("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [data, setData] = useState([]);
   const toast = useToast();
-  const [name, setName] = useState(nameRef.current.value);
-  const [email, setEmail] = useState(emailRef.current.value);
 
   const handleSaveChanges = () => {
-    const newName = nameRef.current.value;
-    const newEmail = emailRef.current.value;
-    const newPassword = passwordRef.current.value;
-    const newConfirmPassword = confirmPasswordRef.current.value;
-
-    if (newName.trim() === "" || newEmail.trim() === "") {
+    if (name.trim() === "" || email.trim() === "") {
       toast({
         title: "Please enter your name and email.",
         status: "error",
@@ -45,7 +40,7 @@ const Account = () => {
       return;
     }
 
-    if (newPassword !== newConfirmPassword) {
+    if (password !== confirmPassword) {
       toast({
         title: "Passwords do not match.",
         status: "error",
@@ -54,14 +49,6 @@ const Account = () => {
       });
       return;
     }
-
-    // TODO: implement logic to save changes
-    nameRef.current.value = newName;
-    emailRef.current.value = newEmail;
-    passwordRef.current.value = "";
-    confirmPasswordRef.current.value = "";
-    setName(newName);
-    setEmail(newEmail);
     toast({
       title: "Changes saved.",
       status: "success",
@@ -87,44 +74,83 @@ const Account = () => {
     });
   };
 
+  const get = async () => {
+    try {
+      let data1 = await axios.get(
+        "https://maroon-sea-urchin-tam.cyclic.app/users/account",
+        {
+          headers: {
+            Authorization: localStorage.getItem("token"),
+          },
+        }
+      );
+      setData(data1.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  console.log(data);
+
+  useEffect(() => {
+    get();
+  }, []);
+
+  const handleNameChange = (event) => {
+    if (data.length > 0) {
+      setName(data[0].name);
+    } else {
+      setName(event.target.value);
+    }
+  };
+
+  const handleEmailChange = (event) => {
+    if (data.length > 0) {
+      setEmail(data[0].email);
+    } else {
+      setEmail(event.target.value);
+    }
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleConfirmPasswordChange = (event) => {
+    setConfirmPassword(event.target.value);
+  };
+
   return (
-    <Flex
-      direction="column"
-      alignItems="center"
-      pt={["30%", "20%", "15%", "10%"]}
-    >
-      <Avatar
-        size="xl"
-        name={name}
-        src={`https://ui-avatars.com/api/?name=${name}&background=random&color=fff`}
-        my={8}
-      />
+    <Flex direction="column" alignItems="center" pt={"8%"}>
+      <Avatar size="xl" name={name} src="https://bit.ly/broken-link" my={8} />
       <Stack spacing={8} w="full" maxW="md">
         <Box>
           <Heading size="md">Personal Information</Heading>
           <Divider my={4} />
           <Stack spacing={4}>
             <Input
-              ref={nameRef}
-              defaultValue={nameRef.current.value}
+              value={name}
+              onChange={handleNameChange}
               placeholder="Full Name"
-              onChange={(e) => setName(e.target.value)}
             />
             <Input
-              ref={emailRef}
-              defaultValue={emailRef.current.value}
+              value={email}
+              onChange={handleEmailChange}
               placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
             />
-            <Input ref={passwordRef} type="password" placeholder="Password" />
             <Input
-              ref={confirmPasswordRef}
+              value={password}
+              onChange={handlePasswordChange}
+              type="password"
+              placeholder="Password"
+            />
+            <Input
+              value={confirmPassword}
+              onChange={handleConfirmPasswordChange}
               type="password"
               placeholder="Confirm Password"
             />
           </Stack>
         </Box>
-
         <Box>
           <Heading size="md">Billing Information</Heading>
           <Divider my={4} />

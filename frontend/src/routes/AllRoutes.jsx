@@ -9,19 +9,21 @@ import Payment from "../components/Checkout/Payment";
 
 import Singleproductpage from "../pages/SingleProductPage";
 import Navbar from "../components/Navbar/Navbar";
+import Account from "../components/Account/Account";
 
 const AllRoutes = () => {
   return (
     <>
-      <Navbar/>
-      <Routes>       
-        <Route path={"/"} element={<Home />} />        
+      <Navbar />
+      <Routes>
+        <Route path={"/"} element={<Home />} />
         <Route path={"/cart"} element={<CartPage />} />
         <Route path={"/login"} element={<Login />} />
         <Route path={"/product"} element={<Product />} />
         <Route path={"/payment"} element={<Payment />} />
         <Route path={"/signup"} element={<SignUp />} />
         <Route path={"/product/:id"} element={<Singleproductpage />} />
+        <Route path={"/account"} element={<Account />} />
       </Routes>
     </>
   );
