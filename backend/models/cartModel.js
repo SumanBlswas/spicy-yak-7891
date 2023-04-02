@@ -12,6 +12,7 @@ const cartSchema = mongoose.Schema({
   rating_count: String,
   size: Array,
   strike_price: String,
+  userID: String,
 });
 
 const cartModel = mongoose.model("cart", cartSchema);
