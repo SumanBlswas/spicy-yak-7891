@@ -20,11 +20,13 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Account = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [data, setData] = useState([]);
+  const navigate = useNavigate()
 
   const toast = useToast();
 
@@ -77,6 +79,7 @@ const Account = () => {
           isClosable: true,
         });
       }
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
