@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./RsFooter.module.css";
 
-export const MsFooter = () => {
+export const RsFooter = () => {
   return (
     <div>
       <div className={styles.msFooter}>
