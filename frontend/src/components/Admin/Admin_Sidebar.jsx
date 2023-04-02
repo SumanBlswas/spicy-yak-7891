@@ -10,6 +10,7 @@ import AddProducts from './AddProducts';
 import AddAdmins from './AddAdmins';
 import Analyse from './Analyse';
 import {Link as Redirect} from "react-router-dom"
+import logo from '../Navbar/logo.jpg'
 
 const LinkItems = [
     { name: 'Dashboard', compName: 'Dashboard',heading:'Dashboard', icon: FiHome },
@@ -50,7 +51,7 @@ function SidebarWithHeader({ children }) {
                 h="full"
                 {...rest}>
                 <Flex h="20" alignItems={"center"} justifyContent="center">
-                    <Image width={'40'} src={'https://scontent.fixr3-4.fna.fbcdn.net/v/t39.30808-6/338161442_1321355152044243_5991912519003939655_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=x6DCkgiUeIgAX-Ur9Kx&_nc_ht=scontent.fixr3-4.fna&oh=00_AfCl7Vg-CtkXZ-zUFKxrVbVBhA79jJGzhvi9a37unCdTYQ&oe=6428121A'}/>
+                    <Image width={'40'} src={logo}/>
                 </Flex>
                 {LinkItems.map((link) => (
                     <NavItem onClick={() =>setComp(link.compName)} key={link.name} icon={link.icon}>
@@ -114,6 +115,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
             borderBottomWidth="1px"
             borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
             justifyContent={{ base: 'space-between', md: 'flex-end' }}
+            border={'1px solid red'}
             {...rest}>
             <IconButton
                 display={{ base: 'flex', md: 'none' }}

@@ -1,18 +1,18 @@
 import { useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteUser, getCarts, getOrders, getUsersList } from '../../redux/Admin/action';
+import { deleteUser,getUsersList } from '../../redux/Admin/action';
 import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableContainer, Heading, IconButton, useToast,CircularProgress } from '@chakra-ui/react'
 import { FiUserX } from 'react-icons/fi';
 
 const ManageUsers = () => {
   const { isLoadingUserList, isErrorUserList, users} = useSelector(store => store.adminReducer);
-  //let {total,totalProfit} = useSelector(store => store.adminReducer);
+  
   const dispatch = useDispatch();
   const toast = useToast();
 
   const handleDelete = (user) => {
     try {
-      dispatch(deleteUser(user.id));
+      dispatch(deleteUser(user._id));
       toast({
         title: 'User Deleted',
         description: `${user.name} has been deleted successfully`,
@@ -33,8 +33,7 @@ const ManageUsers = () => {
 
   useEffect(() => {
     dispatch(getUsersList)
-    // dispatch(getOrders)
-    // dispatch(getCarts)
+    
   }, []);
   // why my this componet is rednering 2 extra times?
   // console.log('manage uses list page rendering')
@@ -72,12 +71,12 @@ const ManageUsers = () => {
             </Tbody>
             <Tfoot bg={'yellow.400'}>
               <Tr>
-                {/* <Th>Total : {users.length}</Th>
-                <Th >Orders : {orders.length}</Th>
-                <Th>Cart : {carts.length}</Th>
-                <Th>Total : ₹{total}</Th>
-                <Th>Profit : ₹{totalProfit}</Th>
-                <Th></Th> */}
+                <Th>Total : {users.length}</Th>
+                <Th >Orders : {0}</Th>
+                <Th>Cart : {0}</Th>
+                <Th>Total : ₹{0}</Th>
+                <Th>Profit : ₹{users.length*100}</Th>
+                <Th></Th>
               </Tr>
             </Tfoot>
           </Table>

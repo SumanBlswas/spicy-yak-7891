@@ -15,7 +15,7 @@ import Singleproductpage from "../pages/SingleProductPage";
 const AllRoutes = () => {
   return (
     <Box>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path={"/"} element={<Home />} />
         <Route path={"/cart"} element={<CartPage />} />

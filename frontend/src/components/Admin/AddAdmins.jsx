@@ -17,7 +17,7 @@ const AddAdmins = () => {
   const formSubmitHandler = (e) => {
     e.preventDefault();
     try {
-      console.log(form);
+      
       dispatch(addAdmin(form))
       toast({
         title: 'Admin Added',
