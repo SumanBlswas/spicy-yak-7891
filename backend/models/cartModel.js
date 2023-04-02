@@ -1,13 +1,10 @@
 import mongoose from "mongoose";
 
 const cartSchema = mongoose.Schema({
-  img1: String,
+  images: String,
   brand: String,
   title: String,
-  price: Number,
-  size: String,
-  love_count: String,
-  rating: String,
+  discounted_price: String,
   category: String,
 });
 
