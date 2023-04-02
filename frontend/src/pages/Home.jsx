@@ -5,37 +5,39 @@ import styles from "./Home.module.css";
 import Men from "./Men";
 import Women from "./Women";
 import { Footer } from "../components/footer/Footer";
-import { Center } from "@chakra-ui/react";
 import Navbar from "../components/Navbar/Navbar";
+import { Box, Center } from "@chakra-ui/react";
 
 const Home = () => {
   const [flag, setFlag] = React.useState(false);
-  // console.log(flag);
+  console.log(flag)
   return (
     <div>
       {" "}
       <div className={styles.main_container}>
-        {/* <div className={styles.nav}>
+        <div className={styles.nav}>
           <Navbar />
-        </div> */}
+        </div>
         <Center>
-          <div>
-            <div className={styles.men_women} textAl>
-              <button disabled={flag === true} onClick={() => setFlag(!flag)}>
+          <Box pt='36'>
+            <Box className={styles.men_women} diplay="flex" textAlign='start' ml='3'>
+              <button disabled={flag===true} onClick={() => setFlag(!flag)} >
                 WOMEN
               </button>
+              {" | "}
               <button disabled={flag === false} onClick={() => setFlag(!flag)}>
                 MEN
               </button>
-            </div>
+            </Box>
             <div>{flag ? <Women /> : <Men />}</div>
-          </div>
+          </Box>
         </Center>
       </div>
-      <footer className={flag ? styles.FooterWomen : styles.Footer_Section}>
-        <Footer />
-      </footer>
-    </div>
+       {/* <div className={styles.footer_section}></div> */}
+       <footer className={flag ? styles.FooterWomen:styles.Footer_Section}>
+        <Footer/>
+      </footer> 
+    </div> 
   );
 };
 

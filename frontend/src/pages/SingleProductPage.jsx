@@ -1,6 +1,5 @@
 import React, { useEffect, useState} from 'react';
 import { useNavigate } from "react-router-dom";
-
 import {
     Box,
     Container,
@@ -217,7 +216,7 @@ return (
             transform: 'translateY(2px)',
             bg: "#003380",
             boxShadow: 'lg',
-          }} onClick={handleClick}>
+          }}>
           Add to cart
         </Button>
 

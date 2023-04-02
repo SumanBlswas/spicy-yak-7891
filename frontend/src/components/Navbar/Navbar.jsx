@@ -13,7 +13,7 @@ const Navbar = () => {
   const [show, setShow] = React.useState(false);
 
   return (
-    <Box pb="28" position={"fixed"} zIndex={"1"}>
+    <Box pb="28" position={"fixed"} zIndex={"999"}>
       <Box className={styles.navbar_container}>
         <Box className={styles.first_box}>
           <Box id={styles.logo}>
@@ -238,9 +238,13 @@ const Navbar = () => {
               </a>
               <Box className={styles.profile_menu}>
                 <h3>Welcome</h3>
-                <Link to="/login">Login</Link>
+
+                <a href="/login">Login</a>
                 <button>Logout</button>
-                <Link>Admin</Link>
+                <a href="/admin">Admin</a>
+
+               
+
               </Box>
             </li>
           </ul>

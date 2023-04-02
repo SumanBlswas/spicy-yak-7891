@@ -491,30 +491,31 @@ const Men = () => {
             {images.length > 0 &&
               images.map((el, index) => {
                 return (
-                  <Link>
-                    <div key={index} className={styles.cards}>
-                      <p id={styles.card_title}>{el.title}</p>
-                      <img src={el.img1} alt={el.title} />
-                      <div className={styles.heart}>
-                        <button
-                          className={styles.like}
-                          onClick={() => handleLike(el.id)}
-                        >
-                          <AiOutlineHeart
-                            className={
-                              flag && num === el.id
-                                ? styles.like_icon
-                                : styles.no_like
-                            }
-                          />
-                        </button>
-                      </div>
-                      <div className={styles.kanika}>
-                        <img src={el.img2} alt={el.title2} />
-                        <p>{el.title2}</p>
-                      </div>
+                  <div key={index} className={styles.cards}>
+                    <p id={styles.card_title}>{el.title}</p>
+                    <Link to="/product">
+                      {" "}
+                      <img src={el.img1} alt={el.title} />{" "}
+                    </Link>
+                    <div className={styles.heart}>
+                      <button
+                        className={styles.like}
+                        onClick={() => handleLike(el.id)}
+                      >
+                        <AiOutlineHeart
+                          className={
+                            flag && num === el.id
+                              ? styles.like_icon
+                              : styles.no_like
+                          }
+                        />
+                      </button>
                     </div>
-                  </Link>
+                    <div className={styles.kanika}>
+                      <img src={el.img2} alt={el.title2} />
+                      <p>{el.title2}</p>
+                    </div>
+                  </div>
                 );
               })}
           </div>

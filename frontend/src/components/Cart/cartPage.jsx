@@ -15,6 +15,7 @@ import Navbar from "../Navbar/Navbar";
 import {useSelector} from "react-redux";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Footer } from "../footer/Footer";
 
 const CartPage = () => {
   const products = useSelector((store) => console.log(store.cart.cart))
@@ -46,7 +47,6 @@ const CartPage = () => {
   
   return (
     <Box>
-      <Navbar/>
       <Grid
         templateColumns="repeat(5, 1fr)"
         gap={4}
@@ -100,6 +100,7 @@ const CartPage = () => {
           </Button>
         </GridItem>
       </Grid>
+      <Footer/>
     </Box>
   );
 };
