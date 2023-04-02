@@ -1,6 +1,9 @@
 
 
 
+
+
+
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import Home from "../pages/Home";
@@ -18,14 +21,11 @@ const AllRoutes = () => {
     
       <Routes>       
         <Route path={"/"} element={<Home />} />        
-       
         <Route path={"/cart"} element={<CartPage />} />
         <Route path={"/login"} element={<Login />} />
-        <Route path={"/product"} element={<Product/>}/>
+        <Route path={"/product"} element={<Product />} />
         <Route path={"/payment"} element={<Payment />} />
         <Route path='/admin' element={<Admin/>} />
-
-
       </Routes>
     
   );

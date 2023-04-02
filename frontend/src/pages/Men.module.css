@@ -2,9 +2,14 @@
   border: 0px solid black;
   width: 1000px;
   height: auto;
-  margin-top: 10px;
-  margin-left: -50px;
-  padding-top: 5px;
+  /* margin: auto; */
+   display:flex;
+   flex-direction:column;
+   justify-content:center;
+  
+  /* margin-top:10px;
+    margin-left:-50px;    
+    padding-top:5px; */
   /* margin:auto; */
 }
 .myfeed {
@@ -13,7 +18,8 @@
   height: 90px;
   display: flex;
   flex-direction: row;
-  /* background-color:rgb(232, 247, 247); */
+  justify-content:center;
+  align-items:center;
   margin-bottom: 20px;
 }
 .myfeed > div {
@@ -27,7 +33,7 @@
 }
 .myfeed > div:nth-child(1) {
   border-right: 0.5px solid black;
-  height: 80%;
+  /* height: 80%; */
 }
 .myfeed > div > img {
   width: 55%;
@@ -116,7 +122,7 @@ a {
   position: absolute;
   border: 0px solid black;
   height: 55px;
-  top: 270px;
+  top: 300px;
   left: 200px;
   width: 55px;
   background-color: white;
@@ -146,44 +152,91 @@ a {
   gap: 10px;
   padding-left: 10px;
 }
-/* .cards>div:nth-child(2)>img */
+
 .kanika > img {
   border: 1px solid black;
   width: 15%;
   height: 40px;
   border-radius: 100%;
 }
-/* .cards>div:nth-child(2) */
+
 .kanika > p {
   font-weight: bold;
 }
 
-/* @media all and(min-width:1000px)and(max-width:1400px){
-    .main_container{
-        margin-left:-250px;
-    }
-
-
-} */
-@media (max-width: 1000px) {
+@media all and (min-width: 768px) and (max-width: 1024px) {
   .main_container {
-    margin-left: -170px;
+    border: 1px solid black;
+    /* width:1000px; */
+    height:auto;
+    /* display:flex;
+    justify-content:center; */
+    margin: auto;
+   
+    /* margin-left: 100px; */
   }
+  .myfeed {
+    /* width:80%; */
+   /* justify-content:center;
+   align-items:center; */
+  }
+  
   .card_container {
+    
+    
     grid-template-columns: repeat(2, 1fr);
+    
+  }
+.heart {
+  position: absolute;
+  border: 0px solid black;
+  height: 55px;
+  top: 430px;
+  left: 325px;
+  width: 55px;
+  background-color: white;
+  border-radius: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+}
+
+/* @media (max-width: 1000px) {
+  .main_container {
+    border: 0px solid black;
+    width: 900px;
+    height: auto;
+    margin: auto;
+    margin-left: 100px;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .card_container {
     grid-template-columns: repeat(2, 1fr);
   }
-  .cards {
-    height: 960px;
+  .myfeed {
+    width: 90%;
+    margin: auto;
   }
-  .cards > img {
-    border: 0px solid blue;
+}
+@media (max-width: 700px) {
+  .myfeed {
+    width: 80%;
+    margin: auto;
+  }
+  .card_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cards {
+    height: 900px;
+    width: auto;
+    border: 1px solid black;
+  }
+  .cards > a > img {
+    border: 1px solid blue;
     width: 100%;
     height: 80%;
+    margin: auto;
   }
   #card_title {
     text-transform: uppercase;
@@ -234,16 +287,8 @@ a {
     border-radius: 100%;
   }
   /* .cards>div:nth-child(2) */
-  .kanika > p {
+/* .kanika > p {
     font-weight: bold;
     font-size: 30px;
-  }
-}
-@media (max-width: 400px) {
-  .card_container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .cards {
-    height: 960px;
-  }
-}
+  } */
+/* } */

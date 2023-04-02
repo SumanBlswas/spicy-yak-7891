@@ -9,8 +9,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Navbar from "../Navbar/Navbar";
+import {useSelector} from "react-redux";
 
 const CartPage = () => {
+  const nxt = useSelector((store) => console.log(store.cartReducer.cart))
   let value = "00";
   let tax = 200;
   return (
@@ -25,18 +27,18 @@ const CartPage = () => {
         pt="28"
       >
         <GridItem colSpan={3} h="auto" bg="tomato">
-          <Heading>Cart Item</Heading>
+          <Heading color="green">Cart Item</Heading>
         </GridItem>
         <GridItem
           colSpan={2}
           h="auto"
           boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px;'}
-          borderRadius={5}
+          borderRadius={8}
           fontSize={["xs", "sm", "sm", "md", "md", "lg"]}
         >
-          <Text as="b" fontSize="xl" textAlign={"start"}>
-            SUMMARY
-          </Text>
+          <Heading textAlign={"center"} color="green">
+            Summary
+          </Heading>
           <Flex justifyContent="space-between" p="4">
             <Text>Total Price</Text>
             <Text>{"Enter Amount"}</Text>

@@ -4,6 +4,7 @@ import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
 import { AiFillFacebook, AiFillTwitterSquare } from "react-icons/ai";
 import logo from "./logo.jpg";
+import { RsFooter } from "../ResponsiveFooter/RsFooter";
 // import { MsFooter } from "../ResponsiveFooter/RsFooter";
 
 export const Footer = () => {
@@ -149,7 +150,7 @@ export const Footer = () => {
           Cookies, Your Privacy Choices and AdChoice
         </div>
          <div className={styles.msFooter}>
-          {/* <MsFooter /> */}
+          <RsFooter />
         </div>
       </div>
     </div>

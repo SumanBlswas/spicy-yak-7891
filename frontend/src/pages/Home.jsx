@@ -20,7 +20,7 @@ const Home = () => {
         </div>
         <Center>
           <Box pt='36'>
-            <Box className={styles.men_women} diplay="flex" textAlign='start' ml='-8'>
+            <Box className={styles.men_women} diplay="flex" textAlign='start' ml='3'>
               <button disabled={flag===true} onClick={() => setFlag(!flag)} >
                 WOMEN
               </button>
@@ -33,10 +33,11 @@ const Home = () => {
           </Box>
         </Center>
       </div>
-      {/* <footer className={flag ? styles.FooterWomen:styles.Footer_Section}>
+       {/* <div className={styles.footer_section}></div> */}
+       <footer className={flag ? styles.FooterWomen:styles.Footer_Section}>
         <Footer/>
-      </footer> */}
-    </div>
+      </footer> 
+    </div> 
   );
 };
 
