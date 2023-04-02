@@ -5,6 +5,7 @@ import {
   Grid,
   GridItem,
   Heading,
+  Image,
   Text,
   // useToast,
 } from "@chakra-ui/react";
@@ -14,9 +15,11 @@ import { Footer } from "../footer/Footer";
 import { useDispatch } from "react-redux";
 import { getCartApi } from "../../redux/CartRedux/cart.action";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 // import { delCartApi } from "../../Redux/Cart/cart.action";
 
 const CartPage = () => {
+  const navigate = useNavigate();
   const { cart } = useSelector((store) => {
     return {
       cart: store.CartReducer.cart,
@@ -29,10 +32,19 @@ const CartPage = () => {
   useEffect(() => {
     dispatch(getCartApi());
   }, [dispatch]);
-  console.log(cart);
+  // console.log(cart);
 
   let value = "00";
-  let tax = 200;
+  let length = cart.length;
+  let tax = 200*length;
+  let total = cart.reduce((acc,el,i) => {
+    // console.log(el,acc)
+    return Number(el.discounted_price)+acc;
+  },0)
+
+  // console.log(total);
+  length === 3 ? value = 200 : value = 0;
+  total = total-value;
 
   return (
     <Box>
@@ -44,8 +56,34 @@ const CartPage = () => {
         objectFit={"contain"}
         pt="28"
       >
-        <GridItem colSpan={3} h="auto" bg="tomato">
+        <GridItem 
+          colSpan={3} 
+          h="auto"
+          boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px;"}
+          borderRadius={8}
+          fontSize={["xs", "sm", "sm", "md", "md", "lg"]}
+          >
           <Heading color="green">Cart Item</Heading>
+          <Box style={{overflowY:"scroll"}} h='400px'>
+            <Box m='auto'
+              mt="20px">
+              {
+                cart.map((el)=>(
+                  <Grid key={el.id} templateColumns={'repeat(2,1fr)'} boxShadow={"rgba(0, 0, 0, 0.34) 0px 3px 8px"} mt="5" overflow={'contain'} borderRadius={'10'} ml="2" mr="2">
+                    {/* {console.log(el)} */}
+                    <GridItem ml={["0",'5','10','15','20']} >
+                      <Image src={el.images[0]} alt={el.brand} h="120px" m="4"/>
+                    </GridItem>
+                    <GridItem fontSize="lg" as="b" mr="10" display="flex" flexDirection={'column'} justifyContent={'center'}>
+                      <Text>{el.title}</Text>
+                      <Text>{el.brand}</Text>
+                      <Text>{el.discounted_price}</Text>
+                    </GridItem>                    
+                  </Grid>
+                ))
+              }
+            </Box>
+          </Box>
         </GridItem>
         <GridItem
           colSpan={2}
@@ -59,7 +97,7 @@ const CartPage = () => {
           </Heading>
           <Flex justifyContent="space-between" p="4">
             <Text>Total Price</Text>
-            <Text>{"Enter Amount"}</Text>
+            <Text>{`₹ ${total}`}</Text>
           </Flex>
           <Flex justifyContent="space-between" p="4">
             <Text>Shipping Charges</Text>
@@ -69,7 +107,7 @@ const CartPage = () => {
           </Flex>
           <Flex justifyContent="space-between" p="4">
             <Text>Coupon Discount</Text>
-            <Text as="b" color="green.500">{`₹${value}`}</Text>
+            <Text as="b" color="green.500">{`₹ ${value}`}</Text>
           </Flex>
           <Flex justifyContent="space-between" p="4">
             <Text>Tax And Charges</Text>
@@ -79,11 +117,11 @@ const CartPage = () => {
           </Flex>
           <Flex justifyContent="space-between" p="4">
             <Text fontSize={["md", "md", "lg", "lg", "xl"]} as="b">
-              Tax And Charges
+              Payable Amount
             </Text>
-            <Text as="b" color="green.500">{`₹${tax}`}</Text>
+            <Text as="b" color="green.500">{`₹ ${total}`}</Text>
           </Flex>
-          <Button colorScheme="red" m="4" pl="10" pr="10" pt="3" pb="3">
+          <Button colorScheme="red" m="4" pl="10" pr="10" pt="3" pb="3" onClick={() => navigate("/payment")}>
             BUY NOW
           </Button>
         </GridItem>

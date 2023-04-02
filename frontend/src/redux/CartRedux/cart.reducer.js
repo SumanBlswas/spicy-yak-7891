@@ -9,7 +9,7 @@ const initialValue = {
   isLoading: false,
   isError: false,
 };
-
+ 
 export const reducer = (state = initialValue, action) => {
   const { type, payload } = action;
   switch (type) {
