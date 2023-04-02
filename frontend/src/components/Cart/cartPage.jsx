@@ -2,45 +2,31 @@ import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
-  Center,
   Flex,
   Grid,
   GridItem,
   Heading,
-  Stack,
   Text,
   useToast,
 } from "@chakra-ui/react";
-import Navbar from "../Navbar/Navbar";
-import {useSelector} from "react-redux";
+import {shallowEqual, useSelector} from "react-redux";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import { Footer } from "../footer/Footer";
+import { cartAPI } from "../../redux/CartRedux/cart.api"; 
+import { useDispatch } from "react-redux";
 
 const CartPage = () => {
-  const products = useSelector((store) => console.log(store.cart.cart))
+  const cart = useSelector((store) =>  store.cartReducer.cart)
   const [data,setData] = useState([]);
-  // console.log(products);
   const navigate = useNavigate();
   const toast = useToast();
 
-  const getCartData = async () => {
-    try{
-      let res = await axios.get('https://maroon-sea-urchin-tam.cyclic.app/cart',{
-        headers: {
-          Authorization: localStorage.getItem('token'),
-        }
-      })
-      console.log(res);
-      setData(res.data);
-    }catch(err){
-      console.log(err);
-      console.log('Cannot get the Data')
-    }
-  }
+  const dispatch = useDispatch()
   useEffect(()=>{
-    getCartData();
-  },[])
+    dispatch(cartAPI());
+  },[dispatch])
+
+  console.log(cart);
 
   let value = "00";
   let tax = 200;

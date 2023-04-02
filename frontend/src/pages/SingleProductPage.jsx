@@ -208,7 +208,7 @@ return (
           mt={8}
           size={'lg'}
           py={'7'}
-          onClick={()=>navigate(`/cart/${id}`)}
+          onClick={handleClick}
           bg={useColorModeValue('#99cc33', 'gray.50')}
           color={useColorModeValue('white', 'gray.900')}
           textTransform={'uppercase'}
