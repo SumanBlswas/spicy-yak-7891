@@ -123,7 +123,7 @@ userRouter.get("/account", async (req, res) => {
   }
 });
 
-userRouter.patch("/account/update", async (req, res) => {
+userRouter.patch("/account_update", async (req, res) => {
   const { userID } = req.body;
   const payload = req.body;
   try {
