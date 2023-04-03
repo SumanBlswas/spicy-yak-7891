@@ -1,6 +1,6 @@
 # Welcome to StyloZone
 
-<h3>StyloZone is a leading e-commerce company that maintains an online Fashion store packed with both classic and trendy Cloths, Beutyproduct and more at affordable prices. These Products can be easily ordered online by the customers, who will get them delivered with many discounts that come and go.This is a collaborative Project from Masai School in the Construct Week With the 5 team members within 5 Days.
+<h3>StyloZone is a leading e-commerce company that maintains an online Fashion store packed with both classic and trendy Clothes, beauty product and more at affordable prices. These Products can be easily ordered online by the customers, who will get them delivered with many discounts that come and go.This is a collaborative Project from Masai School in the Construct Week With the 5 team members within 5 Days.
 </h3>
 
 # Deployed URL 👉 [Click here](https://frontend-nu-hazel-89.vercel.app/)
