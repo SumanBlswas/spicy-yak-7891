@@ -11,7 +11,7 @@
 
 - Ayush Kaushik (My Linkedin profile :- https://www.linkedin.com/in/ayush-kaushik-81418a250/)
 
-- Satyam Kumar Jha (My Linkedin profile :- https://www.linkedin.com/in/safwan-faiz-0343a6184/)
+- Satyam Kumar Jha (My Linkedin profile :- https://www.linkedin.com/in/satyam-kumar-5843b2227/)
 
 - Kartik Jain (My Linkedin profile :- https://www.linkedin.com/in/shivam-gote/)
 <br/>
