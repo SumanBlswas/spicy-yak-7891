@@ -44,48 +44,40 @@
 ## Let's Dive into What we have made
 
 ## Home Page :
-
 ![Home](https://user-images.githubusercontent.com/112753516/229416049-92952fd8-2dba-4775-9436-b7b64a3e240b.png)
 
 ## Product Page :
-
 ![Product](https://user-images.githubusercontent.com/112753516/229416235-fa95a2e8-2f5c-48c7-a484-cf80ac451721.png)
 
 ## Single Product Page :
-
 ![SingleProductPage](https://user-images.githubusercontent.com/112753516/229416414-93b2719b-23f6-42be-8740-6dae67554121.png)
 
 ## Cart Page :
-
 ![Cart](https://user-images.githubusercontent.com/112753516/229416367-0b542e55-d50d-4299-9907-a86b945a19f3.png)
 
 ## Checkout Page :
-
 ![Payment](https://user-images.githubusercontent.com/112753516/229416388-018dbcd4-fc08-4ebe-84e8-a7ddaaaa3fc8.png)
 
 ## Sign-Up Page :
-
 ![SignUp](https://user-images.githubusercontent.com/112753516/229416410-d4fcca11-2deb-4a92-834f-dd59ac9d89cb.png)
 
 ## Login Page :
-
 ![Login](https://user-images.githubusercontent.com/112753516/229417251-516507b9-d1f9-4b50-a413-2ed8ead20c21.png)
 
 ## Account Page:
-
 ![Account Page](https://user-images.githubusercontent.com/112753516/229417846-ce47bf3f-60e4-4ec5-82d7-4502c496e4d3.png)
 
 ## Admin Dashboard Page :
-
 ![Admin Dashboard](https://user-images.githubusercontent.com/112753516/229416730-90a37b1e-1b32-450e-a87e-a13126b1dbf1.png)
 
-## Admin Add Product Page :
-
+## Admin  Add Product Page :
 ![AdminProductAdd](https://user-images.githubusercontent.com/112753516/229416347-77935d09-da47-4a35-bac9-5040af3e537e.png)
 
 ## Admin Manage Products Page:
-
 ![AdminManageProduct](https://user-images.githubusercontent.com/112753516/229417481-48478ed0-ae6f-4e79-9cdd-2707185674ca.png)
+
+## Admin Manage Page:
+![AdminManage](https://user-images.githubusercontent.com/112753516/229417604-415488f0-38af-460b-9051-6974284b36a5.png)
 
 ## Admin Manage Page:
 
