@@ -15,7 +15,7 @@
 
 - Satyam Kumar Jha (My Linkedin profile :- https://www.linkedin.com/in/satyam-kumar-5843b2227/)
 
-- Kartik Jain (My Linkedin profile :- https://www.linkedin.com/in/shivam-gote/)
+- Kartik Jain (My Linkedin profile :- https://in.linkedin.com/in/kartikmickey)
   <br/>
 
 <br/>
