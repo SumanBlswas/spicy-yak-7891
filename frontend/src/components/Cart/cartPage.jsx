@@ -32,12 +32,12 @@ const CartPage = () => {
   const dispatch = useDispatch();
 
   const handleDelete = async (id) => {
-    try{
-      dispatch(delCartApi(id))
-    }catch(err){
-      console.log(err)
+    try {
+      dispatch(delCartApi(id));
+    } catch (err) {
+      console.log(err);
     }
-  }
+  };
 
   useEffect(() => {
     dispatch(getCartApi());
@@ -101,12 +101,15 @@ const CartPage = () => {
                   >
                     <Text>{el.title}</Text>
                     <Text>{el.brand}</Text>
-<<<<<<< HEAD
-                    <Text>{el.discounted_price}</Text>
-=======
                     <Text>{`₹  ${el.discounted_price}`}</Text>
-                    <Button colorScheme="red" onClick={() => handleDelete(el._id)} ml='20' mr="20">Delete</Button>
->>>>>>> ded7d7a165aa2693c8ddfe789a718f0344d4e10b
+                    <Button
+                      colorScheme="red"
+                      onClick={() => handleDelete(el._id)}
+                      ml="20"
+                      mr="20"
+                    >
+                      Delete
+                    </Button>
                   </GridItem>
                 </Grid>
               ))}
@@ -140,7 +143,7 @@ const CartPage = () => {
           <Flex justifyContent="space-between" p="4">
             <Text>Tax And Charges</Text>
             <Text as="b" color="green.300">
-            {`₹ ${tax}`}
+              {`₹ ${tax}`}
             </Text>
           </Flex>
           <Flex justifyContent="space-between" p="4">
