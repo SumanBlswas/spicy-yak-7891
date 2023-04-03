@@ -1,6 +1,6 @@
 # Welcome to StyloZone
 
-<h3>StyloZone is a leading e-commerce company that maintains an online Fashion store packed with both classic and trendy Cloths, Beutyproduct and more at affordable prices. These Products can be easily ordered online by the customers, who will get them delivered with many discounts that come and go.This is a collaborative Project from Masai School in the Construct Week With the 5 team members within 5 Days.
+<h3>StyloZone is a leading e-commerce company that maintains an online Fashion store packed with both classic and trendy Clothes, beauty product and more at affordable prices. These Products can be easily ordered online by the customers, who will get them delivered with many discounts that come and go.This is a collaborative Project from Masai School in the Construct Week With the 5 team members within 5 Days.
 </h3>
 
 # Deployed URL 👉 [Click here](https://frontend-nu-hazel-89.vercel.app/)
@@ -15,12 +15,13 @@
 
 - Satyam Kumar Jha (My Linkedin profile :- https://www.linkedin.com/in/satyam-kumar-5843b2227/)
 
-- Kartik Jain (My Linkedin profile :- https://www.linkedin.com/in/shivam-gote/)
+- Kartik Jain (My Linkedin profile :- https://in.linkedin.com/in/kartikmickey)
   <br/>
 
 <br/>
 <h4 align="center">💻 Tech Stack</h4>
- <div align="center" display="flex" flexWarp="wrap" gap="6px">
+ <div align="center">
+ <img src = "https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" align="center" alt="html5">
  <img src = "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" align="center" alt="css3">
  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"  align="center" alt="javascript" />
  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"  align="center" alt="reactjs" />
