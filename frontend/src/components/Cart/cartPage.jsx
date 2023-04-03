@@ -16,6 +16,8 @@ import { useDispatch } from "react-redux";
 import { getCartApi } from "../../redux/CartRedux/cart.action";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { delCartApi } from "../../redux/CartRedux/cart.action";
 // import { delCartApi } from "../../Redux/Cart/cart.action";
 
 const CartPage = () => {
@@ -28,6 +30,14 @@ const CartPage = () => {
   }, shallowEqual);
 
   const dispatch = useDispatch();
+
+  const handleDelete = async (id) => {
+    try{
+      dispatch(delCartApi(id))
+    }catch(err){
+      console.log(err)
+    }
+  }
 
   useEffect(() => {
     dispatch(getCartApi());
@@ -91,7 +101,12 @@ const CartPage = () => {
                   >
                     <Text>{el.title}</Text>
                     <Text>{el.brand}</Text>
+<<<<<<< HEAD
                     <Text>{el.discounted_price}</Text>
+=======
+                    <Text>{`₹  ${el.discounted_price}`}</Text>
+                    <Button colorScheme="red" onClick={() => handleDelete(el._id)} ml='20' mr="20">Delete</Button>
+>>>>>>> ded7d7a165aa2693c8ddfe789a718f0344d4e10b
                   </GridItem>
                 </Grid>
               ))}
@@ -120,19 +135,19 @@ const CartPage = () => {
           </Flex>
           <Flex justifyContent="space-between" p="4">
             <Text>Coupon Discount</Text>
-            <Text as="b" color="green.500">{`₹ ${value}`}</Text>
+            <Text as="b" color="green.300">{`₹ ${value}`}</Text>
           </Flex>
           <Flex justifyContent="space-between" p="4">
             <Text>Tax And Charges</Text>
-            <Text as="b" color="green.500">
-              {tax}
+            <Text as="b" color="green.300">
+            {`₹ ${tax}`}
             </Text>
           </Flex>
           <Flex justifyContent="space-between" p="4">
             <Text fontSize={["md", "md", "lg", "lg", "xl"]} as="b">
               Payable Amount
             </Text>
-            <Text as="b" color="green.500">{`₹ ${total}`}</Text>
+            <Text as="b" color="green.700">{`₹ ${total}`}</Text>
           </Flex>
           <Button
             colorScheme="red"
