@@ -92,9 +92,6 @@
 
 ![AdminManage](https://user-images.githubusercontent.com/112753516/229417604-415488f0-38af-460b-9051-6974284b36a5.png)
 
-## Admin Manage Page:
-
-![AdminManage](https://user-images.githubusercontent.com/112753516/229417604-415488f0-38af-460b-9051-6974284b36a5.png)
 
 ## Our Learnings
 
