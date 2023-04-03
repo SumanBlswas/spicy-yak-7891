@@ -64,7 +64,10 @@
 ![SignUp](https://user-images.githubusercontent.com/112753516/229416410-d4fcca11-2deb-4a92-834f-dd59ac9d89cb.png)
 
 ## Login Page :
-![Login](https://user-images.githubusercontent.com/112753516/229416647-36525b7d-b5ff-4659-9b8e-adcf7ba37778.png)
+![Login](https://user-images.githubusercontent.com/112753516/229417251-516507b9-d1f9-4b50-a413-2ed8ead20c21.png)
+
+## Account Page:
+![Account Page](https://user-images.githubusercontent.com/112753516/229417846-ce47bf3f-60e4-4ec5-82d7-4502c496e4d3.png)
 
 ## Admin Dashboard Page :
 ![Admin Dashboard](https://user-images.githubusercontent.com/112753516/229416730-90a37b1e-1b32-450e-a87e-a13126b1dbf1.png)
@@ -73,15 +76,10 @@
 ![AdminProductAdd](https://user-images.githubusercontent.com/112753516/229416347-77935d09-da47-4a35-bac9-5040af3e537e.png)
 
 ## Admin Manage Products Page:
-![AdminManageProduct](https://user-images.githubusercontent.com/112753516/229416333-af9fca5e-e7ea-4a97-ade7-016a93970321.png)
+![AdminManageProduct](https://user-images.githubusercontent.com/112753516/229417481-48478ed0-ae6f-4e79-9cdd-2707185674ca.png)
 
 ## Admin Manage Page:
-![AdminManage](https://user-images.githubusercontent.com/112753516/229416321-17a8ce40-9dfd-4928-aa3a-4315a6da1b17.png)
-
-
-
-
-
+![AdminManage](https://user-images.githubusercontent.com/112753516/229417604-415488f0-38af-460b-9051-6974284b36a5.png)
 
 
 
