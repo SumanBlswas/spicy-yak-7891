@@ -46,37 +46,37 @@
 ## Let's Dive into What we have made
 
 ## Home Page :
-![Home](https://user-images.githubusercontent.com/104616395/221775179-41227045-f974-466e-b23d-4bb661dfdc8a.png)
+![Home](https://user-images.githubusercontent.com/112753516/229416049-92952fd8-2dba-4775-9436-b7b64a3e240b.png)
 
 ## Product Page :
-
-![Product Page](https://user-images.githubusercontent.com/104616395/221775264-f6901648-c2a1-4358-961d-31e06e58201f.png)
+![Product](https://user-images.githubusercontent.com/112753516/229416235-fa95a2e8-2f5c-48c7-a484-cf80ac451721.png)
 
 ## Single Product Page :
-![Single Product Page](https://user-images.githubusercontent.com/104616395/221775331-5eca4502-e27a-4cfc-bea5-59122fcbee1d.png)
+![SingleProductPage](https://user-images.githubusercontent.com/112753516/229416414-93b2719b-23f6-42be-8740-6dae67554121.png)
 
 ## Cart Page :
-![Cart](https://user-images.githubusercontent.com/104616395/221775391-7d6bcf9f-9d19-46ad-a337-ea68b62c6f31.png)
+![Cart](https://user-images.githubusercontent.com/112753516/229416367-0b542e55-d50d-4299-9907-a86b945a19f3.png)
 
 ## Checkout Page :
-![checkout](https://user-images.githubusercontent.com/104616395/221775480-dcd4e650-ee4a-416d-8214-68816f21ce19.png)
+![Payment](https://user-images.githubusercontent.com/112753516/229416388-018dbcd4-fc08-4ebe-84e8-a7ddaaaa3fc8.png)
 
 ## Sign-Up Page :
-![Singup](https://user-images.githubusercontent.com/104616395/221775627-5c5abc7d-de63-4d9b-84ba-6982586a712f.png)
+![SignUp](https://user-images.githubusercontent.com/112753516/229416410-d4fcca11-2deb-4a92-834f-dd59ac9d89cb.png)
 
 ## Login Page :
-![Login](https://user-images.githubusercontent.com/104616395/221775677-aaa76f49-9af7-4e28-a72d-8e56d29beafc.png)
-
-## Admin Login Page :
-![Admin Login](https://user-images.githubusercontent.com/104616395/221775737-ed08ab2e-033a-4d4b-a044-74b3e96a9342.png)
+![Login](https://user-images.githubusercontent.com/112753516/229416647-36525b7d-b5ff-4659-9b8e-adcf7ba37778.png)
 
 ## Admin Dashboard Page :
-![Admin DashBoard](https://user-images.githubusercontent.com/104616395/221775805-b0e2d7e3-ab0c-49f4-b1ae-aa39ce566a24.png)
+![Admin Dashboard](https://user-images.githubusercontent.com/112753516/229416730-90a37b1e-1b32-450e-a87e-a13126b1dbf1.png)
 
 ## Admin  Add Product Page :
-![Admin Add Prodcut Page](https://user-images.githubusercontent.com/104616395/221775863-1dd217b2-dc8f-436e-b3de-915211e5c019.png)
+![AdminProductAdd](https://user-images.githubusercontent.com/112753516/229416347-77935d09-da47-4a35-bac9-5040af3e537e.png)
 
+## Admin Manage Products Page:
+![AdminManageProduct](https://user-images.githubusercontent.com/112753516/229416333-af9fca5e-e7ea-4a97-ade7-016a93970321.png)
 
+## Admin Manage Page:
+![AdminManage](https://user-images.githubusercontent.com/112753516/229416321-17a8ce40-9dfd-4928-aa3a-4315a6da1b17.png)
 
 
 
